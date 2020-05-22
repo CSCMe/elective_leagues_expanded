@@ -1,0 +1,4 @@
+opinion_cofounder = {
+    opinion = 15
+    months = 1
+}
