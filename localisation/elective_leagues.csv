@@ -57,7 +57,8 @@ num_cofounders;Amount of Cofounders;;Anzahl der Mitgründer;;;;;;;;;x
 #SUCC LAWS AND STUFF
 
 electorus_desc;Elector;;Wähler;;;;;;;;;x
-opinion_cofounder;Cofounder;;Mitgründer;;;;;;;;;;x
+opinion_cofounder;Potential Cofounder;;Potentieller Mitgründer;;;;;;;;;;x
+opinion_cofounded;Cofounder of our Elective League;;Mitgründer unserer Wahlliga;;;;;;;;;;x
 
 succ_elective_league_desc; An elective league founded by at least 3 titles.\n The holders of these titles and their most important vassal get 2+1 vote.\n;; Ein durch die Vereinigung mehrere Titel gegründetes Wahlreich.\n Die Gründer und Vassalen gleichen Grades bekommen 2 Stimmen. Wichtige Vassallen der Gründer 1 Stimme.\n;;;;;;;;;;x
 succ_elective_league;Elective League;;Wahlliga;;;;;;;;;x

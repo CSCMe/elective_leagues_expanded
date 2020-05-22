@@ -103,7 +103,7 @@ character_event = {
         add_character_modifier = {
             name = founding_elective_league
             hidden = no
-            months = 1
+            years = 1
         }
     }
     option = {

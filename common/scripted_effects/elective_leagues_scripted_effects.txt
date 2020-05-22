@@ -38,6 +38,8 @@ create_league_effect = {
                 who = PREV
                 modifier = opinion_cofounder
             }
+            reverse_opinion = { who = PREV  modifier = opinion_cofounded }
+            opinion = { who = PREV  modifier = opinion_cofounded }
 	        # Create a NAP
 	        opinion = {
 	            modifier = in_non_aggression_pact
@@ -51,8 +53,8 @@ create_league_effect = {
 	                years = 20
 	                who = PREV
 	                origin_description = VOLUNTARY_VASSAL
-	            }
-	        }
+                }
+            }
 	    }
         set_defacto_liege = PREV
 
