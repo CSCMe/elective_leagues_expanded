@@ -3796,7 +3796,7 @@ tribal_league = {
 			NOT = { culture_group = FROM }
 		}
 		additive_modifier = { #Candidate is a foreigner's pet 
-			value = -5
+			value = -3
 			localisation_key = tooltip_feudal_elector_vote_strangers_pet
 			FROM = { 
 				character = ROOT_FROMFROMFROM 
@@ -3805,7 +3805,7 @@ tribal_league = {
 			FROMFROM = { holder_scope = { NOT = { culture = ROOT_FROM } } }
 		}
 		additive_modifier = { #Candidate is a foreigner's pet 
-			value = -7
+			value = -5
 			localisation_key = tooltip_feudal_elector_vote_foreigners_pet
 			FROM = { 
 				character = ROOT_FROMFROMFROM 

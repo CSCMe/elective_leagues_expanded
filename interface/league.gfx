@@ -1,7 +1,7 @@
 spriteTypes = {
 	spriteType = {
 		name = "GFX_create_elective_league"
-		texturefile = "gfx\\interface\\decision_icon_elective_league.dds"
+		texturefile = "gfx\\interface\\decision_icon_elective_league-2.dds"
 	}
 	spriteType = {
 		name = "GFX_elder_stances"

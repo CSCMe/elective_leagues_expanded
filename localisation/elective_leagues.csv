@@ -1,7 +1,7 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 
 # Decisions
-create_elective_league;Found an elective league;;Eine Wahlliga erstellen;;;;;;;x
+create_elective_league;Found an Elective League;;Eine Wahlliga erstellen;;;;;;;x
 create_elective_league_desc;Create a new titular, elective title. Requires two equal-rank cofounders, who will become my new vassals.;;Einen neuen titularen Wahltitel erstellen. Benötigt zwei Mitgründer.;;;;;;;x
 create_elective_league_effect;Tally partners who are adjacent to my realm, including through other partners.;;An mein Reich grenzende Mitgründer zählen.;;;;;;;x
 
@@ -60,13 +60,13 @@ electorus_desc;Elector;;Wähler;;;;;;;;;x
 opinion_cofounder;Potential Cofounder;;Potentieller Mitgründer;;;;;;;;;;x
 opinion_cofounded;Cofounder of our Elective League;;Mitgründer unserer Wahlliga;;;;;;;;;;x
 
-succ_elective_league_desc; An elective league founded by at least 3 titles.\n The holders of these titles and their most important vassal get 2+1 vote.\n;; Ein durch die Vereinigung mehrere Titel gegründetes Wahlreich.\n Die Gründer und Vassalen gleichen Grades bekommen 2 Stimmen. Wichtige Vassallen der Gründer 1 Stimme.\n;;;;;;;;;;x
+succ_elective_league_desc; An Elective League founded by at least 3 titles.\n The holders of these titles and their most important vassal get 2+1 vote.\n;; Ein durch die Vereinigung mehrere Titel gegründetes Wahlreich.\n Die Gründer und Vassalen gleichen Grades bekommen 2 Stimmen. Wichtige Vassallen der Gründer 1 Stimme.\n;;;;;;;;;;x
 succ_elective_league;Elective League;;Wahlliga;;;;;;;;;x
 elective_league;Elective League;;Wahlliga;;;;;;;;;x
 tooltip_EL_big_elector;Important Elector;;Wichtiger Wähler;;;;;;;;;x
 
 #TRIBAL
-succ_tribal_league_desc; An elective league founded by at least 3 titles.\n The holders of these titles and their most important vassal get 2+1 vote.\n In a tribal elective league the title ALWAYS changes to an important elector. Be careful.\n;; Ein durch die Vereinigung mehrere Titel gegründetes Wahlreich.\n Die Gründer und Vassalen gleichen Grades bekommen 2 Stimmen. Wichtige Vassallen der Gründer 1 Stimme.\n Bei einer Stammeswahlliga wechselt die Krone immer in die Hände eines anderen Wählers. Sei vorsichtig.\n;;;;;;;;;;x
+succ_tribal_league_desc; An Tribal Elective League founded by at least 3 titles.\n The holders of these titles and their most important vassal get 2+1 vote.\n In a Tribal Elective League the title ALWAYS changes to an important elector. Be careful.\n;; Ein durch die Vereinigung mehrere Titel gegründetes Wahlreich.\n Die Gründer und Vassalen gleichen Grades bekommen 2 Stimmen. Wichtige Vassallen der Gründer 1 Stimme.\n Bei einer Stammeswahlliga wechselt die Krone immer in die Hände eines anderen Wählers. Sei vorsichtig.\n;;;;;;;;;;x
 succ_tribal_league;Tribal Elective League;;Stammeswahlliga;;;;;;;;;x
 tribal_league;Tribal Elective League;;Stammeswahlliga;;;;;;;;;x
 tooltip_TL_big_elector;Potential Leader;;Potentieller Nachfolger;;;;;;;;;x
