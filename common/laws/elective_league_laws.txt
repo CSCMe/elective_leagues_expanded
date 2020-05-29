@@ -5,8 +5,9 @@ succession_laws = {
 		dynasty_opinion = -4
 		vassal_opinion = 17
 		potential = {
-			is_feudal = yes
-			independent = yes
+		#	is_feudal = yes
+		#	independent = yes
+			always = no
 		}
 		effect = {
 			succession = {
@@ -39,8 +40,9 @@ succession_laws = {
 		dynasty_opinion = -7
 		vassal_opinion = 25
 		potential = {
-			is_tribal = yes
-			independent = yes
+			#is_tribal = yes
+			#independent = yes
+			always = no
 		}
 		effect = {
 			succession = {
