@@ -241,7 +241,33 @@ character_event = {
     option = {
         name = ElectiveLeagues_event_35_NEVER_MIND
         ai_chance = { factor = 10 }
-
+        trigger = {
+             check_variable = { which = num_cofounders  value >= 2 }
+        }
+        remove_character_modifier = founding_elective_league
+        any_opinion_modifier_target = {
+            limit = {
+                reverse_has_opinion_modifier = {
+                    who = PREV
+                    modifier = opinion_cofounder
+                }
+            }
+            hidden_tooltip = {
+                reverse_remove_opinion = {
+                    who = PREV
+                    modifier = opinion_cofounder
+                }
+            }
+            remove_character_modifier = founding_elective_league
+        }
+    }
+    
+    option = {
+        name = ElectiveLeagues_event_35_CANNOT
+        ai_chance = { factor = 10 }
+        trigger = {
+             check_variable = { which = num_cofounders  value < 2 }
+        }
         remove_character_modifier = founding_elective_league
         any_opinion_modifier_target = {
             limit = {

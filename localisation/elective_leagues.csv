@@ -24,7 +24,7 @@ ELECTIVE_LEAGUE_ALLY_ETC;Ally\n;;Verbündeter;;;;;;;x
 
 ElectiveLeagues_event_32_DESC;[From.GetBestName] has joined our league!;;[From.GetBestName] ist unserer Liga beigetreten!;;;;;;;x
 ElectiveLeagues_event_33_DESC;[From.GetBestName] wishes to create an Elective League with us! \nThis will greatly increase our international power at the cost of making us their vassal in an Elective League.\n Do you accept this invitation?;;[From.GetBestName] will eine neues Reich als Wahlliga aufbauen. \nMan hat uns dazu eingeladen. \nEine Wahllige erhöht unsere gemeinsame Macht, allerdings werden wir ein Vassal in dem neuen Wahlreich.\n Nehmt ihr die Einladung an?;;;;;;;x
-ElectiveLeagues_event_35_DESC;I have found [Root.num_cofounders.GetValue] possible co-founders. \n We can create a higher title once we find another player or 2 cofounders of equal rank.;;Ich habe momentan [Root.num_cofounders.GetValue] Mitgründer. \nMit mindestens 2 Mitgründern oder einem Spieler kann ich einen höheren Titel erstellen!;;;;;;;x
+ElectiveLeagues_event_35_DESC;I have found [Root.num_cofounders.GetValue] possible co-founders. \n We can create a higher title once we find a player or 2 cofounders of equal rank.;;Ich habe momentan [Root.num_cofounders.GetValue] Mitgründer. \nMit mindestens 2 Mitgründern oder einem Spieler kann ich einen höheren Titel erstellen!;;;;;;;x
 elective_league_31_event_DESC;After a long time you've finally found the resolve to ask your allies to found an Elective League.\nBe it for your own empowerment, self-defense or a wish for peace:\nSuch a thing has rarely been attempted and succeeded.\n;;Endlich habe ich die Entschlossenheit gefunden meine Verbündeten zu einer Wahlliga einzuladen.\n Sei es für Ermächtigung, Selbstverteidigung oder Friedenswille:\n Eine solche Liga wurde selten versucht und die Zeiten überlebt.;;;;;;x
 
 
@@ -41,7 +41,7 @@ ElectiveLeagues_event_35_DUCHY;Create an elective duchy.;;Ein Wahlherzogtum erst
 ElectiveLeagues_event_35_KINGDOM;Create an elective kingdom.;;Ein WahlkÃ¶nigreich erstellen.;;;;;;;x
 ElectiveLeagues_event_35_EMPIRE;Create an elective empire.;;Ein Wahlkaiserreich erstellen.;;;;;;;x
 ElectiveLeagues_event_35_NEVER_MIND;Never mind.;;Eh. Dann doch nicht.;;;;;;;x
-ElectiveLeagues_event_35_CANNOT;Then we can't;;Also ist es uns nicht möglich;;;;;;x
+ElectiveLeagues_event_35_CANNOT;So we can't;;Also ist es uns nicht möglich;;;;;;x
 elective_league_31_event_yes;Send out the invitations to my allies!;;Schicke die Einladungen an meine Verbündeten!;;;;;;x
 elective_league_31_event_no;Let's not actually found one.;;Lieber doch nicht;;;;;;x
 
