@@ -80,7 +80,7 @@ elective_league = {
 			among_most_powerful_vassals = 1
 			OR = {
 				AND = {
-					real_tier = DUKE
+				#	real_tier = DUKE
 					FROMFROM = { real_tier = EMPEROR }
 					liege = {
 						real_tier = KING
@@ -88,7 +88,7 @@ elective_league = {
 					}
 				}
 				AND = {
-					real_tier = COUNT
+				#	real_tier = COUNT
 					FROMFROM = { real_tier = KING }
 					liege = {
 						real_tier = DUKE
@@ -96,8 +96,8 @@ elective_league = {
 					}
 				}
 				AND = {
-					real_tier = BARON
-					FROMFROM = { real_tier = DUKE }		
+				#	real_tier = BARON
+					FROMFROM = { real_tier = DUKE }	
 					liege = {
 						real_tier = COUNT
 						vassal_of = FROMFROM 
@@ -3455,15 +3455,15 @@ tribal_league = {
 			among_most_powerful_vassals = 1
 			OR = {
 				AND = {
-					real_tier = DUKE
-					FROMFROM = { real_tier = EMPEROR }
-					liege = {
-						real_tier = KING
-						vassal_of = FROMFROM 
+				#		real_tier = DUKE
+						FROMFROM = { real_tier = EMPEROR }
+						liege = {
+							real_tier = KING
+							vassal_of = FROMFROM 
+						}
 					}
-				}
 				AND = {
-					real_tier = COUNT
+				#	real_tier = COUNT
 					FROMFROM = { real_tier = KING }
 					liege = {
 						real_tier = DUKE
@@ -3471,8 +3471,8 @@ tribal_league = {
 					}
 				}
 				AND = {
-					real_tier = BARON
-					FROMFROM = { real_tier = DUKE }		
+				#	real_tier = BARON
+					FROMFROM = { real_tier = DUKE }	
 					liege = {
 						real_tier = COUNT
 						vassal_of = FROMFROM 
