@@ -19,8 +19,9 @@ LOWER_RANK_THAN_US;Lower rank than us\n;;Niederigerer Rang als wir\n;;;;;;;x
 SAME_RANK;Same rank\n;;Gleicher Rang\n;;;;;;;x
 CAN_BE_ELECTOR;High enough rank to vote in our elections\n;;Rank ist hoch genug um ein Wahler zu sein\n;;;;;;;x
 SAME_RELIGION_GROUP;Same religion group\n;;Gleiche Religionsgruppe\n;;;;;;;x
-FEUDAL_ELECTIVE_RELIGION_REQUIREMENT;Conclave DLC, or religion allows Feudal Elective succession\n;;Conclave DLC oder religion die Wahlen erlaubt\n;;;;;;;x
-ELECTIVE_LEAGUE_ALLY_ETC;Ally\n;;Verbündeter;;;;;;;x
+ELECTIVE_LEAGUE_ELECTIVE_REQUIREMENT;Conclave DLC, or religion allows Feudal Elective succession\n;;Conclave DLC oder religion die Wahlen erlaubt\n;;;;;;;x
+ELECTIVE_LEAGUE_ALLY_ETC;Is Ally\n;;Verbündeter;;;;;;;x
+ELECTIVE_LEAGUE_SAME_GOVERNMENT_TYPE;Same government type;; Gleiche Regierungsform;;;;;;;x
 
 ElectiveLeagues_event_32_DESC;[From.GetBestName] has joined our league!;;[From.GetBestName] ist unserer Liga beigetreten!;;;;;;;x
 ElectiveLeagues_event_33_DESC;[From.GetBestName] wishes to create an Elective League with us! \nThis will greatly increase our international power at the cost of making us their vassal in an Elective League.\n Do you accept this invitation?;;[From.GetBestName] will eine neues Reich als Wahlliga aufbauen. \nMan hat uns dazu eingeladen. \nEine Wahllige erhöht unsere gemeinsame Macht, allerdings werden wir ein Vassal in dem neuen Wahlreich.\n Nehmt ihr die Einladung an?;;;;;;;x

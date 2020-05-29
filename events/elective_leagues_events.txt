@@ -9,8 +9,7 @@ character_event = {
     ai = yes  # Players instead use a similar decision, create_elective_league
 
     trigger = {
-	higher_real_tier_than = BARON
-
+    	higher_real_tier_than = BARON
     #    is_feudal = yes
         league_potential_trigger = yes
         religion_allows_feudal_elective_trigger = yes
@@ -261,7 +260,7 @@ character_event = {
             remove_character_modifier = founding_elective_league
         }
     }
-    
+
     option = {
         name = ElectiveLeagues_event_35_CANNOT
         ai_chance = { factor = 10 }

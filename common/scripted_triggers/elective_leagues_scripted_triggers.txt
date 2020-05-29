@@ -6,6 +6,10 @@ league_potential_trigger = {
 	is_landed = yes
 	mercenary = no
 	higher_real_tier_than = BARON
+	OR = {
+		is_feudal = yes
+		is_tribal = yes
+	}
 }
 
 # Visible requirements for co-founding or joining leagues.
@@ -17,6 +21,21 @@ THIS_can_join_PREV_league_trigger = {
 	custom_tooltip = {
 		text = SAME_RELIGION_GROUP  # Less confusing than e.g. "Is Christian"
 		religion_group = PREV
+	}
+
+	custom_tooltip = {
+		text = ELECTIVE_LEAGUE_SAME_GOVERNMENT_TYPE 
+		government = PREV
+		#OR = {
+		#	AND = {
+		#		THIS = { is_feudal = yes }
+		#		PREV = { is_feudal = yes }
+		#	}
+		#	AND = {
+		#		THIS = { is_tribal = yes }
+		#		PREV = { is_tribal = yes }
+		#	}
+		#}
 	}
 
 	is_primary_war_defender = no
@@ -32,7 +51,6 @@ THIS_can_join_PREV_league_trigger = {
 				ai = yes
 				is_friend = PREV                     # Weak ally
 			}
-
 		}
 		NOT = {has_character_modifier = founding_elective_league}
 	}
@@ -41,9 +59,9 @@ THIS_can_join_PREV_league_trigger = {
 	opinion = { who = PREV  value = 26 }
 }
 
-religion_allows_feudal_elective_trigger = {
+religion_allows_feudal_elective_trigger = { #Maybe deprecated with the new government types?
 	custom_tooltip = {
-		text = FEUDAL_ELECTIVE_RELIGION_REQUIREMENT
+		text = ELECTIVE_LEAGUE_ELECTIVE_REQUIREMENT
 		OR = {
 			has_dlc = "Zeus"
 			NOR = {
