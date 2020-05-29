@@ -30,9 +30,10 @@ character_event = {
 character_event = {
     id = ElectiveLeagues.31
     is_triggered_only = yes
-    hide_window = yes
-
-    immediate = {
+    hide_window = no
+    picture = GFX_evt_prospering_province
+    desc = elective_league_31_event_DESC
+ #   immediate = {
 
         #any_opinion_modifier_target = {
         #    limit = {
@@ -47,9 +48,19 @@ character_event = {
         #    }
         #}
 
-        set_variable = { which = num_cofounders  value = 0 }
-        character_event = { id = ElectiveLeagues.32 days = 1}  # Find recursively-adjacent cofounders
-        character_event = { id = ElectiveLeagues.35 days = 12}  # Show list of cofounders; allow creating a higher title if >=2 # delay 45 days
+
+#    }
+    option = {
+        name = elective_league_31_event_yes
+        ai_chance = { factor = 100 }
+            hidden_tooltip = {
+            set_variable = { which = num_cofounders  value = 0 }
+            character_event = { id = ElectiveLeagues.32 days = 1}  # Find recursively-adjacent cofounders
+            character_event = { id = ElectiveLeagues.35 days = 12}  # Show list of cofounders; allow creating a higher title if >=2 # delay 45 days
+        }
+    }
+    option = {
+        name = elective_league_31_event_no
     }
 }
 
@@ -122,13 +133,13 @@ character_event = {
     id = ElectiveLeagues.35
     is_triggered_only = yes
     desc = ElectiveLeagues_event_35_DESC
-    picture = GFX_evt_coronation
+    picture = GFX_evt_state_diplomacy
 
     option = {
         trigger = {
             tier = COUNT
             OR = {
-                check_variable = { which = num_cofounders  value = 2 }
+                check_variable = { which = num_cofounders  value >= 2 }
                 any_player = {
                     reverse_has_opinion_modifier = {
                         who = PREV
@@ -163,7 +174,7 @@ character_event = {
         trigger = {
             tier = DUKE
             OR = { #WENN NICHT FNKTIONIER OR ENTFERNEN UND ANY_PLAYER
-                check_variable = { which = num_cofounders  value = 2 }
+                check_variable = { which = num_cofounders  value >= 2 }
                 any_player = {
                     reverse_has_opinion_modifier = {
                         who = PREV
@@ -197,7 +208,7 @@ character_event = {
         trigger = {
             tier = KING
             OR = {
-                check_variable = { which = num_cofounders  value = 2 }
+                check_variable = { which = num_cofounders  value >= 2 }
                 any_player = {
                     reverse_has_opinion_modifier = {
                         who = PREV

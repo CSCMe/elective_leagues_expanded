@@ -18,13 +18,15 @@ ADJACENT_REALM;Adjacent realm\n;;Angrenzendes Reich\n;;;;;;;x
 LOWER_RANK_THAN_US;Lower rank than us\n;;Niederigerer Rang als wir\n;;;;;;;x
 SAME_RANK;Same rank\n;;Gleicher Rang\n;;;;;;;x
 CAN_BE_ELECTOR;High enough rank to vote in our elections\n;;Rank ist hoch genug um ein Wahler zu sein\n;;;;;;;x
-SAME_RELIGION_GROUP;Same religion group\n;;Gleiche Religionsgrupper\n;;;;;;;x
+SAME_RELIGION_GROUP;Same religion group\n;;Gleiche Religionsgruppe\n;;;;;;;x
 FEUDAL_ELECTIVE_RELIGION_REQUIREMENT;Conclave DLC, or religion allows Feudal Elective succession\n;;Conclave DLC oder religion die Wahlen erlaubt\n;;;;;;;x
 ELECTIVE_LEAGUE_ALLY_ETC;Ally\n;;Verbündeter;;;;;;;x
 
 ElectiveLeagues_event_32_DESC;[From.GetBestName] has joined our league!;;[From.GetBestName] ist unserer Liga beigetreten!;;;;;;;x
 ElectiveLeagues_event_33_DESC;[From.GetBestName] wishes to create an Elective League with us! \nThis will greatly increase our international power at the cost of making us their vassal in an Elective League.\n Do you accept this invitation?;;[From.GetBestName] will eine neues Reich als Wahlliga aufbauen. \nMan hat uns dazu eingeladen. \nEine Wahllige erhöht unsere gemeinsame Macht, allerdings werden wir ein Vassal in dem neuen Wahlreich.\n Nehmt ihr die Einladung an?;;;;;;;x
-ElectiveLeagues_event_35_DESC;I currently have [Root.num_cofounders.GetValue] possible co-founders. With at least 2 co-founders or another player of equal rank, I can create a higher title!;;Ich habe momentan [Root.num_cofounders.GetValue] Mitgründer. \nMit mindestens 2 Mitgründern oder einem Spieler kann ich einen höheren Titel erstellen!;;;;;;;x
+ElectiveLeagues_event_35_DESC;I have found [Root.num_cofounders.GetValue] possible co-founders. \n We can create a higher title once we find another player or 2 cofounders of equal rank.;;Ich habe momentan [Root.num_cofounders.GetValue] Mitgründer. \nMit mindestens 2 Mitgründern oder einem Spieler kann ich einen höheren Titel erstellen!;;;;;;;x
+elective_league_31_event_DESC;After a long time you've finally found the resolve to ask your allies to found an Elective League.\nBe it for your own empowerment, self-defense or a wish for peace:\nSuch a thing has rarely been attempted and succeeded.\n;;Endlich habe ich die Entschlossenheit gefunden meine Verbündeten zu einer Wahlliga einzuladen.\n Sei es für Ermächtigung, Selbstverteidigung oder Friedenswille:\n Eine solche Liga wurde selten versucht und die Zeiten überlebt.;;;;;;x
+
 
 # Titles created by the big event
 # NB: name based on Capital rather than PrimaryTitle to prevent recursive names like "Paris Union League Federation"
@@ -32,12 +34,16 @@ ELECTIVE_REALM_NAME_DUKE;[Root.Capital.GetName] Union;;;;;;;;;x
 ELECTIVE_REALM_NAME_KING;[Root.PrimaryTitle.GetAdjective] League;;[Root.PrimaryTitle.GetAdjective]e Liga;;;;;;;x
 ELECTIVE_REALM_NAME_EMPEROR;[Root.Culture.GetName] Federation;;[Root.Culture.GetName]e Föderation;;;;;;;x
 ELECTIVE_REALM_ADJECTIVE_DUKE;[Root.Capital.GetName]ian;;[Root.Capital.GetName]sch;;;;;;x
-# Options in the big event
+
+# Options in events
 # NB: Not using "[Root.Capital.GetName] Union" etc on button labels, to work around a bug where text is truncated BEFORE substitution
 ElectiveLeagues_event_35_DUCHY;Create an elective duchy.;;Ein Wahlherzogtum erstellen.;;;;;;;x
 ElectiveLeagues_event_35_KINGDOM;Create an elective kingdom.;;Ein WahlkÃ¶nigreich erstellen.;;;;;;;x
 ElectiveLeagues_event_35_EMPIRE;Create an elective empire.;;Ein Wahlkaiserreich erstellen.;;;;;;;x
 ElectiveLeagues_event_35_NEVER_MIND;Never mind.;;Eh. Dann doch nicht.;;;;;;;x
+ElectiveLeagues_event_35_CANNOT;Then we can't;;Also ist es uns nicht möglich;;;;;;x
+elective_league_31_event_yes;Send out the invitations to my allies!;;Schicke die Einladungen an meine Verbündeten!;;;;;;x
+elective_league_31_event_no;Let's not actually found one.;;Lieber doch nicht;;;;;;x
 
 # Effects
 NAPS_WITH_NEW_VASSALS;You sign a 20-year non-aggression pact with each cofounder, preventing you from revoking titles and preventing them from joining factions.\n;;Du unterschreibst einen 20-Jahre langen Nichtangriffspakt mit deinen Mitgründern. Dieser verhindert Titelaberkennung und das Beitreten von Fraktionen.\n;;;;;;;x
