@@ -106,7 +106,35 @@ character_event = {
 
     option = {
         name = accept_league
-        ai_chance = { factor = 90 }
+
+        ai_chance = { 
+            factor = 90 
+            modifier = {
+                factor = 0
+                OR = {
+                    trait = proud
+                    trait = stubborn
+                    realm_size = 150
+                }
+            }
+            modifier = {
+                factor = 0.4
+                OR = {
+                    trait = content
+                    trait = cynical
+                    trait = dull
+                }
+            }
+            modifier = {
+                factor = 1.5
+                OR = {
+                    trait = trusting
+                    trait = gregarious
+                    trait = shrewd
+                }
+            }
+        }
+
         FROM = {
             character_event = { id = ElectiveLeagues.32 }
         }
@@ -116,9 +144,12 @@ character_event = {
             years = 1
         }
     }
+
     option = {
         name = refuse_league
-        ai_chance = { factor = 10 }
+        ai_chance = {
+            factor = 10
+        }
         FROM = { change_variable = { which = num_cofounders  value = -1 } }
         reverse_remove_opinion = {
             who = FROM
@@ -149,7 +180,7 @@ character_event = {
             
         }
         name = ElectiveLeagues_event_35_DUCHY
-        ai_chance = { factor = 90 }
+        ai_chance = { factor = 97 }
 
         primary_title = {
             create_title = {
@@ -183,7 +214,7 @@ character_event = {
             }
         }
         name = ElectiveLeagues_event_35_KINGDOM
-        ai_chance = { factor = 90 }
+        ai_chance = { factor = 97 }
 
         primary_title = {
             create_title = {
@@ -217,7 +248,7 @@ character_event = {
             }
         }
         name = ElectiveLeagues_event_35_EMPIRE
-        ai_chance = { factor = 90 }
+        ai_chance = { factor = 97 }
 
         primary_title = {
             create_title = {
@@ -239,7 +270,7 @@ character_event = {
 
     option = {
         name = ElectiveLeagues_event_35_NEVER_MIND
-        ai_chance = { factor = 10 }
+        ai_chance = { factor = 3 }
         trigger = {
              check_variable = { which = num_cofounders  value >= 2 }
         }
@@ -263,7 +294,7 @@ character_event = {
 
     option = {
         name = ElectiveLeagues_event_35_CANNOT
-        ai_chance = { factor = 10 }
+        ai_chance = { factor = 3 }
         trigger = {
              check_variable = { which = num_cofounders  value < 2 }
         }
