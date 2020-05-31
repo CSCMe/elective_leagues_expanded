@@ -28,16 +28,17 @@ decisions = {
                 text = create_elective_league_effect
                 hidden_tooltip = {
                     character_event = { id = ElectiveLeagues.31 }
-                    add_character_modifier = {
-                        name = founding_elective_league
-                        hidden = no
-                        years = 1
-                    }
+                }
+                add_character_modifier = {
+                    name = founding_elective_league
+                    hidden = no
+                    years = 1
                 }
             }
         }
     }
 }
+
 
 
 targetted_decisions = {
