@@ -55,23 +55,43 @@ elective_league = {
 			value = 50	
 			OR = {
 				AND = {
-					real_tier = KING
-					vassal_of = FROMFROM 
+					OR = {
+						real_tier = KING
+						
+						AND = {
+							real_tier = DUKE
+							NOT = {	any_vassal = { real_tier = KING } }
+							among_most_powerful_vassals = 3
+						}
+					}
+					vassal_of = FROMFROM
 					FROMFROM = { real_tier = EMPEROR }
 				}
 				AND = {
-					real_tier = DUKE
+					OR = {
+						real_tier = DUKE
+						
+						AND = {
+							real_tier = COUNT
+							NOT = {	any_vassal = { real_tier = DUKE } }
+							among_most_powerful_vassals = 3
+						}
+					}
 					vassal_of = FROMFROM 
 					FROMFROM = { real_tier = KING }
 				}
 				AND = {
-					real_tier = COUNT
+					OR = {
+						real_tier = COUNT
+						
+						AND = {
+							real_tier = BARON
+							NOT = {	any_vassal = { real_tier = COUNT } }
+							among_most_powerful_vassals = 3
+						}
+					}
 					vassal_of = FROMFROM 
 					FROMFROM = { real_tier = DUKE }
-				}
-				AND = {
-					among_most_powerful_vassals = 1 #Most powerful vassal is always an important elector
-					vassal_of = FROMFROM
 				}
 			}
 		}
@@ -3272,32 +3292,43 @@ elective_league = {
 			}
 			OR = { #ROOT = Current Title holder, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Null
 				AND = {
-					FROM = {
-						real_tier = KING
+					OR = {
+						AND = {
+							FROM = { 
+								real_tier = DUKE
+								among_most_powerful_vassals = 3
+							}
+							ROOT = { NOT = { any_vassal= { real_tier = KING } } }
+						}
+						FROM = { real_tier = KING }
 					}
-					ROOT = {
-						real_tier = EMPEROR
-					}
+					FROMFROM = { real_tier = EMPEROR }
 				}
 				AND = {
-					FROM = {
-						real_tier = DUKE
+					OR = {
+						AND = {
+							FROM = { 
+								real_tier = COUNT
+								among_most_powerful_vassals = 3
+							}
+							ROOT = { NOT = { any_vassal= { real_tier = DUKE } } }
+						}
+						FROM = { real_tier = DUKE }
 					}
-					ROOT = {
-						real_tier = KING
-					}
+					FROMFROM = { real_tier = KING }
 				}
 				AND = {
-					FROM = {
-						real_tier = COUNT
+					OR = {
+						AND = {
+							FROM = { 
+								real_tier = BARON
+								among_most_powerful_vassals = 3
+							}
+							ROOT = { NOT = { any_vassal= { real_tier = COUNT } } }
+						}
+						FROM = { real_tier = COUNT }
 					}
-					ROOT = {
-						real_tier = DUKE
-					}
-				}
-				FROM = {
-					among_most_powerful_vassals = 1 #Falls back to ones most powerful vassal. You can't cheat the system now :)
-					vassal_of = ROOT
+					FROMFROM = { real_tier = DUKE }
 				}
 			}
 		}
@@ -3426,30 +3457,47 @@ tribal_league = {
 			}
 		}
 		additive_modifier = { #Important Electors
-			value = 50
+			value = 50	
 			OR = {
-				AND = {
-					real_tier = KING
-					vassal_of = FROMFROM 
+				AND = { #Checks if it's a direct vassal of one lower tier or two lower tiers if there's nobody with only one
+					OR = {
+						real_tier = KING	
+						AND = {
+							real_tier = DUKE
+							NOT = {	any_vassal = { real_tier = KING } }
+							among_most_powerful_vassals = 3
+						}
+					}
+					vassal_of = FROMFROM
 					FROMFROM = { real_tier = EMPEROR }
 				}
 				AND = {
-					real_tier = DUKE
+					OR = {
+						real_tier = DUKE
+						AND = {
+							real_tier = COUNT
+							NOT = {	any_vassal = { real_tier = DUKE } }
+							among_most_powerful_vassals = 3
+						}
+					}
 					vassal_of = FROMFROM 
 					FROMFROM = { real_tier = KING }
 				}
 				AND = {
-					real_tier = COUNT
+					OR = {
+						real_tier = COUNT
+						AND = {
+							real_tier = BARON
+							NOT = {	any_vassal = { real_tier = COUNT } }
+							among_most_powerful_vassals = 3
+						}
+					}
 					vassal_of = FROMFROM 
 					FROMFROM = { real_tier = DUKE }
-					
-				}
-				AND = {
-					among_most_powerful_vassals = 1
-					vassal_of = FROMFROM
 				}
 			}
 		}
+
 		additive_modifier = { #Important Electors' Vassal doesn't work sometimes #among_most_powerful_vassals
 			value = 20
 			among_most_powerful_vassals = 1
@@ -6650,32 +6698,45 @@ tribal_league = {
 			FROM = { any_claim = { title = ROOT_FROMFROM } }
 			OR = { #ROOT = Current Title holder, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Null
 				AND = {
-					FROM = {
-						real_tier = KING
+					OR = {
+						AND = {
+							FROM = { 
+								real_tier = DUKE
+								among_most_powerful_vassals = 3
+							}
+							ROOT = { NOT = { any_vassal= { real_tier = KING } } }
+								
+						}
+						FROM = { real_tier = KING }
 					}
-					ROOT = {
-						real_tier = EMPEROR
-					}
+					FROMFROM = { real_tier = EMPEROR }
 				}
 				AND = {
-					FROM = {
-						real_tier = DUKE
+					OR = {
+						AND = {
+							FROM = { 
+								real_tier = COUNT
+								among_most_powerful_vassals = 3
+							}
+							ROOT = { NOT = { any_vassal= { real_tier = DUKE } } }
+							
+						}
+						FROM = { real_tier = DUKE }
 					}
-					ROOT = {
-						real_tier = KING
-					}
+					FROMFROM = { real_tier = KING }
 				}
 				AND = {
-					FROM = {
-						real_tier = COUNT
+					OR = {
+						AND = {
+							FROM = { 
+								real_tier = BARON
+								among_most_powerful_vassals = 3
+							}
+							ROOT = { NOT = { any_vassal= { real_tier = COUNT } } }
+						}
+						FROM = { real_tier = COUNT }
 					}
-					ROOT = {
-						real_tier = DUKE
-					}
-				}
-				FROM = {
-					vassal_of = ROOT
-					among_most_powerful_vassals = 1
+					FROMFROM = { real_tier = DUKE }
 				}
 			}
 		}
