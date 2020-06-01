@@ -40,6 +40,15 @@ THIS_can_join_PREV_league_trigger = {
 
 	is_primary_war_defender = no
 
+	#Not already in elective league
+	custom_tooltip = {
+		text = ELECTIVE_LEAGUE_NO_ELECTIVE_LEAGUE
+		NOR = {
+			has_law = succ_elective_league
+			has_law = succ_tribal_league
+		}
+	}
+
 	# Ally or potential ally
 	custom_tooltip = {
 		text = ELECTIVE_LEAGUE_ALLY_ETC

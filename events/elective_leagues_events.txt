@@ -14,7 +14,10 @@ character_event = {
         league_potential_trigger = yes
         religion_allows_feudal_elective_trigger = yes
         NOT = {has_character_modifier = founding_elective_league}
-
+        NOR = {
+            has_law = succ_elective_league
+            has_law = succ_tribal_league
+        }
     }
 
     mean_time_to_happen = {
@@ -67,6 +70,7 @@ character_event = {
     }
     option = {
         name = elective_league_31_event_no
+        remove_character_modifier = founding_elective_league
     }
 }
 
@@ -115,7 +119,7 @@ character_event = {
         name = accept_league
 
         ai_chance = { 
-            factor = 90 
+            factor = 99 
             modifier = {
                 factor = 0.2
                 OR = {
@@ -155,7 +159,7 @@ character_event = {
     option = {
         name = refuse_league
         ai_chance = {
-            factor = 10
+            factor = 1
         }
         FROM = { change_variable = { which = num_cofounders  value = -1 } }
         reverse_remove_opinion = {

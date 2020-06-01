@@ -9,6 +9,10 @@ decisions = {
                 real_tier = DUKE
                 real_tier = COUNT
             }
+            NOR = {
+                has_law = succ_elective_league
+                has_law = succ_tribal_league
+            }
             league_potential_trigger = yes
         }
 
