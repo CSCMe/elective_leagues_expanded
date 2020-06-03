@@ -10,7 +10,7 @@ character_event = {
 
     trigger = {
     	#higher_real_tier_than = BARON #already  checked in league_potential_trigger
-    #    is_feudal = yes
+        #is_feudal = yes
         league_potential_trigger = yes
         religion_allows_feudal_elective_trigger = yes
         NOT = {has_character_modifier = founding_elective_league}
