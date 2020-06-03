@@ -7,7 +7,6 @@ league_potential_trigger = {
 	is_adult = yes
 	mercenary = no
 	higher_real_tier_than = BARON
-	lower_real_tier_than = EMPEROR
 	OR = {
 		is_feudal = yes
 		is_tribal = yes
