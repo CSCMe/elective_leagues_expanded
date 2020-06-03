@@ -4,8 +4,10 @@ league_potential_trigger = {
 	independent = yes
 	in_revolt = no
 	is_landed = yes
+	is_adult = yes
 	mercenary = no
 	higher_real_tier_than = BARON
+	lower_real_tier_than = EMPEROR
 	OR = {
 		is_feudal = yes
 		is_tribal = yes
@@ -55,10 +57,12 @@ THIS_can_join_PREV_league_trigger = {
 		OR = {
 			is_allied_with = PREV                # Strong ally
 			AND = {
-				has_non_aggression_pact_with = PREV  # Potential ally, even if the AI hasn't bothered
-				is_close_relative = PREV             # Potential ally, even if the AI hasn't bothered
-				ai = yes
-				is_friend = PREV                     # Weak ally
+				OR = {
+					is_friend = PREV                     # Weak ally
+					has_non_aggression_pact_with = PREV  # Potential ally, even if the AI hasn't bothered
+					is_close_relative = PREV             # Potential ally, even if the AI hasn't bothered
+				}
+				PREV = { ai = yes }
 			}
 		}
 		NOT = {has_character_modifier = founding_elective_league}
@@ -92,14 +96,14 @@ THIS_can_be_elector_of_PREV_trigger = {
 	}
 }
 
-THIS_and_PREV_same_rank_trigger = {
+THIS_and_PREV_same_rank_trigger = { #Mind that Empires have been commented out
 	custom_tooltip = {
 		text = SAME_RANK
 		OR = {
 			AND = { tier = COUNT    PREV = { tier = COUNT   } }
 			AND = { tier = DUKE     PREV = { tier = DUKE    } }
 			AND = { tier = KING     PREV = { tier = KING    } }
-			AND = { tier = EMPEROR  PREV = { tier = EMPEROR } }
+#			AND = { tier = EMPEROR  PREV = { tier = EMPEROR } } 
 		}
 	}
 }

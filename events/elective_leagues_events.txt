@@ -9,7 +9,7 @@ character_event = {
     ai = yes  # Players instead use a similar decision, create_elective_league
 
     trigger = {
-    	higher_real_tier_than = BARON
+    	#higher_real_tier_than = BARON #already  checked in league_potential_trigger
     #    is_feudal = yes
         league_potential_trigger = yes
         religion_allows_feudal_elective_trigger = yes
@@ -65,7 +65,7 @@ character_event = {
         hidden_tooltip = {
             set_variable = { which = num_cofounders  value = 0 }
             character_event = { id = ElectiveLeagues.32 days = 1}  # Find recursively-adjacent cofounders
-            character_event = { id = ElectiveLeagues.35 days = 12}  # Show list of cofounders; allow creating a higher title if >=2 # delay 45 days
+            character_event = { id = ElectiveLeagues.35 days = 15}  # Show list of cofounders; allow creating a higher title if >=2 # delay 45 days
         }
     }
     option = {
