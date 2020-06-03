@@ -45,7 +45,7 @@ decisions = {
 
 
 
-targetted_decisions = {
+targetted_decisions = { #TODO: Make multiplayer friendly (Event chains :))
 
     vassalize_new_elector = {
 

@@ -18,6 +18,11 @@ character_event = {
             has_law = succ_elective_league
             has_law = succ_tribal_league
         }
+        any_independent_ruler = {
+            THIS_and_PREV_same_rank_trigger = yes
+            THIS_can_join_PREV_league_trigger = yes
+            THIS_and_FROM_are_adjacent_trigger = yes
+        }
     }
 
     mean_time_to_happen = {
@@ -113,7 +118,7 @@ character_event = {
     is_triggered_only = yes
     hide_window = no
     desc = ElectiveLeagues_event_33_DESC
-    picture = GFX_evt_coronation
+    picture = GFX_evt_diplomat_hf
 
     option = {
         name = accept_league
@@ -121,11 +126,18 @@ character_event = {
         ai_chance = { 
             factor = 99 
             modifier = {
+                factor = 0.01
+                realm_size >= 200
+            }
+            modifier = {
+                factor = 0.02
+                realm_size >= 150
+            }
+            modifier = {
                 factor = 0.2
                 OR = {
                     trait = proud
                     trait = stubborn
-                    realm_size = 150
                 }
             }
             modifier = {
@@ -161,11 +173,37 @@ character_event = {
         ai_chance = {
             factor = 1
         }
-        FROM = { change_variable = { which = num_cofounders  value = -1 } }
+        FROM = { 
+            change_variable = { which = num_cofounders  value = -1 } 
+            character_event = { id = ElectiveLeagues.34 days = 1 }
+        }
         reverse_remove_opinion = {
             who = FROM
             modifier = opinion_cofounder
         }
+    }
+}
+
+#ROOT gets notified about someone refusing to join the league
+character_event = {
+    id = ElectiveLeagues.34
+    desc = ElectiveLeagues_event_34_DESC
+    picture = GFX_evt_book_carolingian_script  # ...
+    is_triggered_only = yes
+
+    option = {
+        name = UNFORTUNATE
+        trigger = {
+            ROOT = { NOT = { trait = wroth } }
+        }
+    }
+    
+    option = {
+        trigger = {
+            ROOT = { trait = wroth }
+        }
+        name = EVTOPTAHFP30036
+        opinion = { who = PREV  modifier = opinion_outraged years = 3}
     }
 }
 
