@@ -46,7 +46,7 @@ character_event = {  #TODO: Increase timer for EL35 or check if everyone decided
     is_triggered_only = yes
     hide_window = no
     picture = GFX_evt_prospering_province
-    desc = elective_league_31_event_DESC
+    desc = ElectiveLeagues_event_31_DESC
  #   immediate = {
 
         #any_opinion_modifier_target = {
@@ -106,9 +106,9 @@ character_event = {
         }
     }
 
-    option = {
-        name = OK
-    }
+    #option = { #don't forget to uncomment if hide_window = no
+    #    name = OK
+    #}
 }
 
 # Bounce event # CONFIRmATION EVENT
@@ -175,7 +175,7 @@ character_event = {
             factor = 1
         }
         FROM = { 
-            character_event = { id = ElectiveLeagues.34 days = 1 }
+            letter_event = { id = ElectiveLeagues.34 days = 1 }
         }
         reverse_remove_opinion = {
             who = FROM
@@ -185,10 +185,10 @@ character_event = {
 }
 
 #ROOT gets notified about someone refusing to join the league
-character_event = {
+letter_event = {
     id = ElectiveLeagues.34
     desc = ElectiveLeagues_event_34_DESC
-    picture = GFX_evt_book_carolingian_script  # ...
+#    picture = GFX_evt_book_carolingian_script  # ...
     is_triggered_only = yes
 
     option = {
@@ -413,18 +413,36 @@ character_event = {
                 THIS_and_FROM_are_adjacent_trigger = yes  # Hoping FROM is treated as ROOT when no FROM...
                 NOT = { has_opinion_modifier = { who = ROOT  modifier = opinion_granted_independence } }
             }
-            character_event = { id = ElectiveLeagues.46 }
+            letter_event = { id = ElectiveLeagues.46 }
         }
     }
+}
+
+#Helper event for the player decision
+#Fixes scopes for EL.46 add_THIS_to_FROM_existing_league_effect
+#
+character_event = {
+    id = ElectiveLeagues.45
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        FROM = {
+            letter_event = { id = ElectiveLeagues.46 days = 1}
+        }
+    }
+    #option = { #in case I make visible for debugs
+    #    name = OK
+    #}
 }
 
 # ROOT is asked by FROM to join an existing elective league
 # Triggered by AI event ElectiveLeagues.40
 # Player decision vassalize_new_elector does NOT use this event because FROMFROM and interaction description
-character_event = {
+letter_event = {
     id = ElectiveLeagues.46
     desc = ElectiveLeagues_event_46_DESC
-    picture = GFX_evt_coronation  # ...
+#    picture = GFX_evt_coronation  # ...
     is_triggered_only = yes
 
     option = {
@@ -432,34 +450,22 @@ character_event = {
             factor = 10 
         }
         name = accept_league
-        if = {
-            limit = {
-                FROMFROM = {
-                    always = yes
-                }
-            }
-            FROM = { #works by making from the this and thus fromfrom the from, makes 
-                add_THIS_to_FROM_existing_league_effect = yes
-            }
-        }
-        else = {
-            add_THIS_to_FROM_existing_league_effect = yes   
-        }
+        add_THIS_to_FROM_existing_league_effect = yes   
         any_vassal = {
-            character_event = { id = ElectiveLeagues.50 }
+            letter_event = { id = ElectiveLeagues.50 }
         }
     }
     option = {
         name = refuse_league
-        FROM = { character_event = { id = ElectiveLeagues.34 days = 1 } }
+        FROM = { letter_event = { id = ElectiveLeagues.34 days = 1 } }
     }
 }
 
 #NOTIFY vassals event
-character_event = {
+letter_event = {
     id = ElectiveLeagues.50
     desc = ElectiveLeagues_event_50_DESC
-    picture = GFX_evt_coronation  # ...
+#    picture = GFX_evt_coronation  # ...
     is_triggered_only = yes
 
     option = {

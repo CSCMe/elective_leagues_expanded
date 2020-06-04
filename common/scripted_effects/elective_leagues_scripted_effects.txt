@@ -34,7 +34,7 @@ create_league_effect = {
             has_character_modifier = founding_elective_league
         }
         any_vassal = {
-            character_event = { id = ElectiveLeagues.50}
+            letter_event = { id = ElectiveLeagues.50}
         }
         remove_character_modifier = founding_elective_league
         hidden_tooltip = {

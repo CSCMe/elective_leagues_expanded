@@ -87,7 +87,9 @@ targetted_decisions = {
         }
 
         effect = {
-            character_event = { id = ElectiveLeagues.46 days = 1}
+            FROM = {
+                character_event = { id = ElectiveLeagues.45 }
+            }
             #add_THIS_to_FROM_existing_league_effect = yes
         }
     }
