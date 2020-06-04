@@ -24,12 +24,13 @@ ELECTIVE_LEAGUE_ALLY_ETC;Is Ally\n;;Verbündeter;;;;;;;x
 ELECTIVE_LEAGUE_SAME_GOVERNMENT_TYPE;Same government type;; Gleiche Regierungsform;;;;;;;x
 ELECTIVE_LEAGUE_NO_ELECTIVE_LEAGUE;Not already in Elective League;;Nicht in Wahlliga;;;;;;;x
 
-ElectiveLeagues_event_34_DESC;[From.GetBestName] has refused our offer.;;[From.GetBestName] hat unser Angebot abgelehnt.;;;;;;;x
+ElectiveLeagues_event_34_DESC;[From.GetBestName] has refused the offer to join our league.;;[From.GetBestName] hat unser Angebot abgelehnt.;;;;;;;x
 ElectiveLeagues_event_32_DESC;[From.GetBestName] has joined our league!;;[From.GetBestName] ist unserer Liga beigetreten!;;;;;;;x
-ElectiveLeagues_event_33_DESC;[From.GetBestName] wishes to be a cofounder in his Elective League! \nThis will greatly increase our international power at the cost of making us their vassal in an Elective League.\n Do you accept this invitation?;;[From.GetBestName] will eine neues Reich als Wahlliga aufbauen. \nMan hat uns dazu eingeladen. \nEine Wahllige erhöht unsere gemeinsame Macht, allerdings werden wir ein Vassal in dem neuen Wahlreich.\n Nehmt ihr die Einladung an?;;;;;;;x
+ElectiveLeagues_event_33_DESC;[From.GetBestName] wishes to be a cofounder in his Elective League! \nThis will greatly increase our international power at the cost of making us their vassal in an Elective League.\n Do we accept this invitation?;;[From.GetBestName] will eine neues Reich als Wahlliga aufbauen. \nMan hat uns dazu eingeladen. \nEine Wahllige erhöht unsere gemeinsame Macht, allerdings werden wir ein Vassal in dem neuen Wahlreich.\n Nehmt ihr die Einladung an?;;;;;;;x
 ElectiveLeagues_event_35_DESC;I have found [Root.num_cofounders.GetValue] possible co-founders. \n We can create a higher title once we find a player or 2 cofounders of equal rank.;;Ich habe momentan [Root.num_cofounders.GetValue] Mitgründer. \nMit mindestens 2 Mitgründern oder einem Spieler kann ich einen höheren Titel erstellen!;;;;;;;x
-elective_league_31_event_DESC;After a long time you've finally found the resolve to ask your allies to found an Elective League.\nBe it for your own empowerment, self-defense or a wish for peace:\nSuch a thing has rarely been attempted and succeeded.\n;;Endlich habe ich die Entschlossenheit gefunden meine Verbündeten zu einer Wahlliga einzuladen.\n Sei es für Ermächtigung, Selbstverteidigung oder Friedenswille:\n Eine solche Liga wurde selten versucht und die Zeiten überlebt.;;;;;;x
-
+elective_league_31_event_DESC;After a long time you've finally found the resolve to ask your allies to found an Elective League.\nBe it for your own empowerment, self-defence or a wish for peace:\nSuch a thing has rarely been attempted and succeeded.\n;;Endlich habe ich die Entschlossenheit gefunden meine Verbündeten zu einer Wahlliga einzuladen.\n Sei es für Ermächtigung, Selbstverteidigung oder Friedenswille:\n Eine solche Liga wurde selten versucht und die Zeiten überlebt.;;;;;;x
+ElectiveLeagues_event_50_DESC;Your liege decided to join an Elective League with other rulers.;;Dein Lehnsherr hat sich dazu entschieden einer Wahlliga beizutreten.;;;;;;;x
+ElectiveLeagues_event_46_DESC;We received a letter from [From.GetBestName].\n "I have decided to strengthen our alliance by offering you my full protection as liege lord."\n "You will be an elector of our league shall you accept this offer.";;;;;;;;;x
 
 # Titles created by the big event
 # NB: name based on Capital rather than PrimaryTitle to prevent recursive names like "Paris Union League Federation"
@@ -41,19 +42,21 @@ ELECTIVE_REALM_ADJECTIVE_DUKE;[Root.Capital.GetName]ian;;[Root.Capital.GetName]s
 # Options in events
 # NB: Not using "[Root.Capital.GetName] Union" etc on button labels, to work around a bug where text is truncated BEFORE substitution
 ElectiveLeagues_event_35_DUCHY;Create an elective duchy.;;Ein Wahlherzogtum erstellen.;;;;;;;x
-ElectiveLeagues_event_35_KINGDOM;Create an elective kingdom.;;Ein WahlkÃ¶nigreich erstellen.;;;;;;;x
+ElectiveLeagues_event_35_KINGDOM;Create an elective kingdom.;;Ein Wahlkönigreich erstellen.;;;;;;;x
 ElectiveLeagues_event_35_EMPIRE;Create an elective empire.;;Ein Wahlkaiserreich erstellen.;;;;;;;x
 ElectiveLeagues_event_35_NEVER_MIND;Never mind.;;Eh. Dann doch nicht.;;;;;;;x
 ElectiveLeagues_event_35_CANNOT;So we can't;;Also ist es uns nicht möglich;;;;;;x
-elective_league_31_event_yes;Send out the invitations to my allies!;;Schicke die Einladungen an meine Verbündeten!;;;;;;x
+elective_league_31_event_yes;Send out the invitations to our allies!;;Schicke die Einladungen an unsere Verbündeten!;;;;;;x
 elective_league_31_event_no;Let's not actually found one.;;Lieber doch nicht;;;;;;x
+ElectiveLeagues_event_34_WROTH_TOOLTIP;This option is available because of your §YWroth§;;Verfügbar aufgrund Eigenschaft §YWroth§;;;;;;x
+ElectiveLeagues_event_50_Opportunity;or pose to be a great opportunity;;oder große Chancen bringen;;;;;;x
+ElectiveLeagues_event_50_Take;This might take power away from us;;Das könnte uns viel Macht rauben;;;;;;x
 
 # Effects
-NAPS_WITH_NEW_VASSALS;You sign a 20-year non-aggression pact with each cofounder, preventing you from revoking titles and preventing them from joining factions.\n;;Du unterschreibst einen 20-Jahre langen Nichtangriffspakt mit deinen Mitgründern. Dieser verhindert Titelaberkennung und das Beitreten von Fraktionen.\n;;;;;;;x
-#BYE_COUNCIL;Your council members will be relieved of their duties, allowing you to form a new council without the hassle of firing anyone\n;;;;;;;;;x
+NAPS_WITH_NEW_VASSALS;We sign a 20-year non-aggression pact with each cofounder, preventing us from revoking titles and preventing them from joining factions.\n;;Du unterschreibst einen 20-Jahre langen Nichtangriffspakt mit deinen Mitgründern. Dieser verhindert Titelaberkennung und das Beitreten von Fraktionen.\n;;;;;;;x
+#BYE_COUNCIL;Your council members will be relieved of their duties, allowing us to form a new council without the hassle of firing anyone\n;;;;;;;;;x
 BYE_COUNCIL;You will be able to hire new council members.\n;;Du wirst neue Ratsmitglieder einstellen müssen.\n;;;;;;;x
 
-WELCOME_TO_EXISTING_LEAGUE;I have decided to strengthen our alliance by offering you my full protection as liege lord. Don't forget to vote on who should the next ruler of [From.PrimaryTitle.GetName]!;;;;;;;;;x
 # SUCCESSION THINGS
 
 
