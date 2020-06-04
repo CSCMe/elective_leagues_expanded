@@ -31,6 +31,9 @@ create_league_effect = {
                 modifier = opinion_cofounder
             }
         }
+        any_vassal = {
+            character_event = { id = ElectiveLeagues.50}
+        }
         remove_character_modifier = founding_elective_league
         hidden_tooltip = {
             # Remove the computed opinion modifier
@@ -70,20 +73,17 @@ create_league_effect = {
 
 add_THIS_to_FROM_existing_league_effect = {
     set_defacto_liege = FROM
-
     opinion = {
         modifier = in_non_aggression_pact
         years = 20
         who = FROM
         origin_description = VOLUNTARY_LIEGE
     }
-    FROM = {
-        opinion = {
-            modifier = in_non_aggression_pact
-            years = 20
-            who = ROOT
-            origin_description = VOLUNTARY_VASSAL
-        }
+    reverse_opinion = {
+        modifier = in_non_aggression_pact
+        years = 20
+        who = FROM
+        origin_description = VOLUNTARY_VASSAL
     }
 }
 

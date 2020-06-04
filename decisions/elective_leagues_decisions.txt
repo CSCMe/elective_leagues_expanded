@@ -44,7 +44,8 @@ decisions = {
 }
 
 
-
+#FROM is TAKER
+#ROOT is target CHARACTER
 targetted_decisions = { #TODO: Make multiplayer friendly (Event chains :))
 
     vassalize_new_elector = {
@@ -62,7 +63,10 @@ targetted_decisions = { #TODO: Make multiplayer friendly (Event chains :))
         allow = {
             FROM = {
                 primary_title = {
-                    has_law = succ_elective_league
+                    OR = {
+                        has_law = succ_elective_league
+                        has_law = succ_tribal_league
+                    }
                     is_titular = yes
                 }
 
@@ -83,8 +87,8 @@ targetted_decisions = { #TODO: Make multiplayer friendly (Event chains :))
         }
 
         effect = {
-            add_THIS_to_FROM_existing_league_effect = yes
+            character_event = { id = ElectiveLeagues.46 days = 1}
+            #add_THIS_to_FROM_existing_league_effect = yes
         }
-
     }
 }

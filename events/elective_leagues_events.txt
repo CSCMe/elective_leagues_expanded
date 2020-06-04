@@ -63,7 +63,7 @@ character_event = {
         #}
 
 
-#    }
+    #}
     option = {
         name = elective_league_31_event_yes
         ai_chance = { factor = 100 }
@@ -127,11 +127,12 @@ character_event = {
             factor = 99 
             modifier = {
                 factor = 0.01
-                realm_size >= 200
+                realm_size >= 250
             }
             modifier = {
                 factor = 0.02
                 realm_size >= 150
+                NOT = { realm_size >= 250}
             }
             modifier = {
                 factor = 0.2
@@ -199,11 +200,12 @@ character_event = {
     }
     
     option = {
+        tooltip_info_custom = ElectiveLeagues_event_34_WROTH_TOOLTIP
         trigger = {
             ROOT = { trait = wroth }
         }
         name = EVTOPTAHFP30036
-        opinion = { who = PREV  modifier = opinion_outraged years = 3}
+        opinion = { who = FROM  modifier = opinion_outraged years = 3}
     }
 }
 
@@ -400,7 +402,6 @@ character_event = {
                 THIS_and_FROM_are_adjacent_trigger = yes  # Hoping FROM is treated as ROOT when no FROM...
                 NOT = { has_opinion_modifier = { who = ROOT  modifier = opinion_granted_independence } }
             }
-
             character_event = { id = ElectiveLeagues.46 }
         }
     }
@@ -412,16 +413,52 @@ character_event = {
 # Todo: add option to players to decline, a persistent opinion modifier for having declined, and a way to undo it...
 character_event = {
     id = ElectiveLeagues.46
-    desc = WELCOME_TO_EXISTING_LEAGUE
+    desc = ElectiveLeagues_event_46_DESC
     picture = GFX_evt_coronation  # ...
     is_triggered_only = yes
 
     option = {
-        name = OK
-        add_THIS_to_FROM_existing_league_effect = yes
+        ai_chance = { 
+            factor = 10 
+        }
+        name = accept_league
+        if = {
+            limit = {
+                FROMFROM = {
+                    always = yes
+                }
+            }
+            FROM = { #works by making from the this and thus fromfrom the from, makes 
+                add_THIS_to_FROM_existing_league_effect = yes
+            }
+        }
+        else = {
+            add_THIS_to_FROM_existing_league_effect = yes   
+        }
+        any_vassal = {
+            character_event = { id = ElectiveLeagues.50 }
+        }
+    }
+    option = {
+        name = refuse_league
+        FROM = { character_event = { id = ElectiveLeagues.34 days = 1 } }
     }
 }
 
+#NOTIFY vassals event
+character_event = {
+    id = ElectiveLeagues.50
+    desc = ElectiveLeagues_event_50_DESC
+    picture = GFX_evt_coronation  # ...
+    is_triggered_only = yes
+
+    option = {
+        name = ElectiveLeagues_event_50_Take #This might take power away from us
+    }
+    option = {
+        name = ElectiveLeagues_event_50_Opportunity #or it could pose to be an opportunity
+    }
+}
 
 ##For testing |wipe_council_effect|
 #character_event = {
