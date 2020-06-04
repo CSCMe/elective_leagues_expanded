@@ -46,7 +46,7 @@ decisions = {
 
 #FROM is TAKER
 #ROOT is target CHARACTER
-targetted_decisions = { #TODO: Make multiplayer friendly (Event chains :))
+targetted_decisions = {
 
     vassalize_new_elector = {
 

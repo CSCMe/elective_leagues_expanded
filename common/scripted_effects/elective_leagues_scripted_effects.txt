@@ -24,12 +24,14 @@ create_league_effect = {
 	}
 
     remove_character_modifier = founding_elective_league
-    any_opinion_modifier_target = {
+
+    any_opinion_modifier_target = { #Cofounders
         limit = {
             reverse_has_opinion_modifier = {
                 who = PREV
                 modifier = opinion_cofounder
             }
+            has_character_modifier = founding_elective_league
         }
         any_vassal = {
             character_event = { id = ElectiveLeagues.50}
@@ -60,8 +62,6 @@ create_league_effect = {
             }
 	    }
         set_defacto_liege = PREV
-
-        # Todo: notify new vassals in case one of them is a player (or even give them the option of not joining)
     }
 
     custom_tooltip = {

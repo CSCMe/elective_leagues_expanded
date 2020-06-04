@@ -2,7 +2,7 @@ namespace = ElectiveLeagues
 
 
 # AI ruler tries to create a new league
-character_event = {
+character_event = {      
     id = ElectiveLeagues.30
     hide_window = yes
     only_playable = yes # This counts only every count and above ruler.
@@ -41,7 +41,7 @@ character_event = {
 
 
 # ROOT tries to create a new league (players from decision; AI from event ElectiveLeagues.30)
-character_event = {
+character_event = {  #TODO: Increase timer for EL35 or check if everyone decided.
     id = ElectiveLeagues.31
     is_triggered_only = yes
     hide_window = no
@@ -226,6 +226,7 @@ character_event = {
                             who = PREV
                             modifier = opinion_cofounder
                         }
+                        has_character_modifier = founding_elective_league
                     }
                     check_variable = { which = num_cofounders  value >= 1 }
                 }
@@ -264,6 +265,7 @@ character_event = {
                             who = PREV
                             modifier = opinion_cofounder
                         }
+                        has_character_modifier = founding_elective_league
                     }
                     check_variable = { which = num_cofounders  value >= 1 }
                 }
@@ -301,6 +303,7 @@ character_event = {
                             who = PREV
                             modifier = opinion_cofounder
                         }
+                        has_character_modifier = founding_elective_league
                     }
                     check_variable = { which = num_cofounders  value >= 1 }
                 }
@@ -418,7 +421,6 @@ character_event = {
 # ROOT is asked by FROM to join an existing elective league
 # Triggered by AI event ElectiveLeagues.40
 # Player decision vassalize_new_elector does NOT use this event because FROMFROM and interaction description
-# Todo: add option to players to decline, a persistent opinion modifier for having declined, and a way to undo it...
 character_event = {
     id = ElectiveLeagues.46
     desc = ElectiveLeagues_event_46_DESC
