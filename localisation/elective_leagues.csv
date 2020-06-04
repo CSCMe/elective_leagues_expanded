@@ -2,12 +2,12 @@
 
 # Decisions
 create_elective_league;Found an Elective League;;Eine Wahlliga erstellen;;;;;;;x
-create_elective_league_desc;Create a new titular, elective title. Requires two equal-rank cofounders, who will become my new vassals.;;Einen neuen titularen Wahltitel erstellen. Benï¿½tigt zwei Mitgrï¿½nder.;;;;;;;x
-create_elective_league_effect;Tally partners who are adjacent to my realm, including through other partners.;;An mein Reich grenzende Mitgrï¿½nder zï¿½hlen.;;;;;;;x
+create_elective_league_desc;Create a new titular, elective title. Requires two equal-rank cofounders, who will become my new vassals.;;Einen neuen titularen Wahltitel erstellen. Benötigt zwei Mitgründer.;;;;;;;x
+create_elective_league_effect;Tally partners who are adjacent to my realm, including through other partners.;;An mein Reich grenzende Mitgründer zählen.;;;;;;;x
 
 # Targeted Decisions
-vassalize_new_elector;Vassalize New Elector;;Wï¿½hler vassalisieren;;;;;;;x
-vassalize_new_elector_desc;We can vassalize allies who would become electors in our league.;;Wir kï¿½nnen Verbuendete vassalisieren wenn sie Wï¿½hler in der Liga werden.;;;;;;;x
+vassalize_new_elector;Vassalize New Elector;;Wähler vassalisieren;;;;;;;x
+vassalize_new_elector_desc;We can vassalize allies who would become electors in our league.;;Wir können Verbuendete vassalisieren wenn sie Wähler in der Liga werden.;;;;;;;x
 
 # Opinion modifier origins (appears as hover reason for non-aggression pact)
 VOLUNTARY_LIEGE;Voluntary liege;;Freiwilliger Lehnsherr;;;;;;;x
@@ -20,65 +20,65 @@ SAME_RANK;Same rank\n;;Gleicher Rang\n;;;;;;;x
 CAN_BE_ELECTOR;High enough rank to vote in our elections\n;;Rank ist hoch genug um ein Wahler zu sein\n;;;;;;;x
 SAME_RELIGION_GROUP;Same religion group\n;;Gleiche Religionsgruppe\n;;;;;;;x
 ELECTIVE_LEAGUE_ELECTIVE_REQUIREMENT;Conclave DLC, or religion allows Feudal Elective succession\n;;Conclave DLC oder religion die Wahlen erlaubt\n;;;;;;;x
-ELECTIVE_LEAGUE_ALLY_ETC;Is Ally\n;;Verbï¿½ndeter;;;;;;;x
+ELECTIVE_LEAGUE_ALLY_ETC;Is Ally\n;;Verbündeter;;;;;;;x
 ELECTIVE_LEAGUE_SAME_GOVERNMENT_TYPE;Same government type;; Gleiche Regierungsform;;;;;;;x
 ELECTIVE_LEAGUE_NO_ELECTIVE_LEAGUE;Not already in Elective League;;Nicht in Wahlliga;;;;;;;x
 
 ElectiveLeagues_event_34_DESC;[From.GetBestName] has refused the offer to join our league.;;[From.GetBestName] hat unser Angebot abgelehnt.;;;;;;;x
 ElectiveLeagues_event_32_DESC;[From.GetBestName] has joined our league!;;[From.GetBestName] ist unserer Liga beigetreten!;;;;;;;x
-ElectiveLeagues_event_33_DESC;[From.GetBestName] wishes to be a cofounder in his Elective League! \nThis will greatly increase our international power at the cost of making us their vassal in an Elective League.\n Do we accept this invitation?;;[From.GetBestName] will eine neues Reich als Wahlliga aufbauen. \nMan hat uns dazu eingeladen. \nEine Wahllige erhï¿½ht unsere gemeinsame Macht, allerdings werden wir ein Vassal in dem neuen Wahlreich.\n Nehmt ihr die Einladung an?;;;;;;;x
-ElectiveLeagues_event_35_DESC;I have found [Root.num_cofounders.GetValue] possible co-founders. \n We can create a higher title once we find a player or 2 cofounders of equal rank.;;Ich habe momentan [Root.num_cofounders.GetValue] Mitgrï¿½nder. \nMit mindestens 2 Mitgrï¿½ndern oder einem Spieler kann ich einen hï¿½heren Titel erstellen!;;;;;;;x
-ElectiveLeagues_event_31_DESC;After a long time you've finally found the resolve to ask your allies to found an Elective League.\nBe it for your own empowerment, self-defence or a wish for peace:\nSuch a thing has rarely been attempted and succeeded.\n;;Endlich habe ich die Entschlossenheit gefunden meine Verbï¿½ndeten zu einer Wahlliga einzuladen.\n Sei es fï¿½r Ermï¿½chtigung, Selbstverteidigung oder Friedenswille:\n Eine solche Liga wurde selten versucht und die Zeiten ï¿½berlebt.;;;;;;x
+ElectiveLeagues_event_33_DESC;[From.GetBestName] wishes to be a cofounder in his Elective League! \nThis will greatly increase our international power at the cost of making us their vassal in an Elective League.\n Do we accept this invitation?;;[From.GetBestName] will eine neues Reich als Wahlliga aufbauen. \nMan hat uns dazu eingeladen. \nEine Wahllige erhöht unsere gemeinsame Macht, allerdings werden wir ein Vassal in dem neuen Wahlreich.\n Nehmt ihr die Einladung an?;;;;;;;x
+ElectiveLeagues_event_35_DESC;I have found [Root.num_cofounders.GetValue] possible co-founders. \n We can create a higher title once we find a player or 2 cofounders of equal rank.;;Ich habe momentan [Root.num_cofounders.GetValue] Mitgründer. \nMit mindestens 2 Mitgründern oder einem Spieler kann ich einen höheren Titel erstellen!;;;;;;;x
+ElectiveLeagues_event_31_DESC;After a long time you've finally found the resolve to ask your allies to found an Elective League.\nBe it for your own empowerment, self-defence or a wish for peace:\nSuch a thing has rarely been attempted and succeeded.\n;;Endlich habe ich die Entschlossenheit gefunden meine Verbündeten zu einer Wahlliga einzuladen.\n Sei es für Ermächtigung, Selbstverteidigung oder Friedenswille:\n Eine solche Liga wurde selten versucht und die Zeiten überlebt.;;;;;;x
 ElectiveLeagues_event_50_DESC;Your liege decided to join an Elective League with other rulers.;;Dein Lehnsherr hat sich dazu entschieden einer Wahlliga beizutreten.;;;;;;;x
-ElectiveLeagues_event_46_DESC;We have received a letter:\n "I have decided to strengthen our alliance by offering you my full protection as liege lord in our Elective League.\n A seat as an elector in our Elective League is guaranteed if you decide to join.";;Wir haben einen Brief mit dem Angebot bekommen,\n uns einer Wahlliga anzuschlieï¿½en.\n Falls wir dieses Angebot annehmen, werden wir ein Wï¿½hler im Wahlreich.;;;;;;;x
+ElectiveLeagues_event_46_DESC;We have received a letter:\n "I have decided to strengthen our alliance by offering you my full protection as liege lord in our Elective League.\n A seat as an elector in our Elective League is guaranteed if you decide to join.";;Wir haben einen Brief mit dem Angebot bekommen,\n uns einer Wahlliga anzuschließen.\n Falls wir dieses Angebot annehmen, werden wir ein Wähler im Wahlreich.;;;;;;;x
 
 # Titles created by the big event
 # NB: name based on Capital rather than PrimaryTitle to prevent recursive names like "Paris Union League Federation"
 ELECTIVE_REALM_NAME_DUKE;[Root.Capital.GetName] Union;;;;;;;;;x
 ELECTIVE_REALM_NAME_KING;[Root.PrimaryTitle.GetAdjective] League;;[Root.PrimaryTitle.GetAdjective]e Liga;;;;;;;x
-ELECTIVE_REALM_NAME_EMPEROR;[Root.Culture.GetName] Federation;;[Root.Culture.GetName]e Fï¿½deration;;;;;;;x
+ELECTIVE_REALM_NAME_EMPEROR;[Root.Culture.GetName] Federation;;[Root.Culture.GetName]e Föderation;;;;;;;x
 ELECTIVE_REALM_ADJECTIVE_DUKE;[Root.Capital.GetName]ian;;[Root.Capital.GetName]sch;;;;;;x
 
 # Options in events
 # NB: Not using "[Root.Capital.GetName] Union" etc on button labels, to work around a bug where text is truncated BEFORE substitution
 ElectiveLeagues_event_35_DUCHY;Create an elective duchy.;;Ein Wahlherzogtum erstellen.;;;;;;;x
-ElectiveLeagues_event_35_KINGDOM;Create an elective kingdom.;;Ein Wahlkï¿½nigreich erstellen.;;;;;;;x
+ElectiveLeagues_event_35_KINGDOM;Create an elective kingdom.;;Ein Wahlkönigreich erstellen.;;;;;;;x
 ElectiveLeagues_event_35_EMPIRE;Create an elective empire.;;Ein Wahlkaiserreich erstellen.;;;;;;;x
 ElectiveLeagues_event_35_NEVER_MIND;Never mind.;;Eh. Dann doch nicht.;;;;;;;x
-ElectiveLeagues_event_35_CANNOT;So we can't;;Also ist es uns nicht mï¿½glich;;;;;;x
-elective_league_31_event_yes;Send out the invitations to our allies!;;Schicke die Einladungen an unsere Verbï¿½ndeten!;;;;;;x
+ElectiveLeagues_event_35_CANNOT;So we can't;;Also ist es uns nicht möglich;;;;;;x
+elective_league_31_event_yes;Send out the invitations to our allies!;;Schicke die Einladungen an unsere Verbündeten!;;;;;;x
 elective_league_31_event_no;Let's not actually found one.;;Lieber doch nicht;;;;;;x
-ElectiveLeagues_event_34_WROTH_TOOLTIP;This option is available because of your ï¿½YWrothï¿½!;;Verfï¿½gbar aufgrund deiner Eigenschaft ï¿½YWrothï¿½!;;;;;;x
-ElectiveLeagues_event_50_Take;This might take power away from us...;;Das kï¿½nnte uns viel Macht rauben...;;;;;;x
-ElectiveLeagues_event_50_Opportunity;...Or pose to be a great opportunity;;...Oder groï¿½e Chancen bringen;;;;;;x
+ElectiveLeagues_event_34_WROTH_TOOLTIP;This option is available because of your §YWroth§!;;Verfügbar aufgrund deiner Eigenschaft §YWroth§!;;;;;;x
+ElectiveLeagues_event_50_Take;This might take power away from us...;;Das könnte uns viel Macht rauben...;;;;;;x
+ElectiveLeagues_event_50_Opportunity;...Or pose to be a great opportunity;;...Oder große Chancen bringen;;;;;;x
 
 # Effects
-NAPS_WITH_NEW_VASSALS;We sign a 20-year non-aggression pact with each cofounder, preventing us from revoking titles and preventing them from joining factions.\n;;Du unterschreibst einen 20-Jahre langen Nichtangriffspakt mit deinen Mitgrï¿½ndern. Dieser verhindert Titelaberkennung und das Beitreten von Fraktionen.\n;;;;;;;x
+NAPS_WITH_NEW_VASSALS;We sign a 20-year non-aggression pact with each cofounder, preventing us from revoking titles and preventing them from joining factions.\n;;Du unterschreibst einen 20-Jahre langen Nichtangriffspakt mit deinen Mitgründern. Dieser verhindert Titelaberkennung und das Beitreten von Fraktionen.\n;;;;;;;x
 #BYE_COUNCIL;Your council members will be relieved of their duties, allowing us to form a new council without the hassle of firing anyone\n;;;;;;;;;x
-BYE_COUNCIL;You will be able to hire new council members.\n;;Du wirst neue Ratsmitglieder einstellen mï¿½ssen.\n;;;;;;;x
+BYE_COUNCIL;You will be able to hire new council members.\n;;Du wirst neue Ratsmitglieder einstellen müssen.\n;;;;;;;x
 
 # SUCCESSION THINGS
 
 
 
-founding_elective_league;Founding an Elective League;;Grï¿½ndet eine Wahlliga;;;;;;;;;;x
+founding_elective_league;Founding an Elective League;;Gründet eine Wahlliga;;;;;;;;;;x
 accept_league;We accept this offer.;;Wir nehmen das Angebot an.;;;;;;;;;;x
 refuse_league;We refuse!;;Wir lehnen das Angebot ab.;;;;;;;;;;x
-num_cofounders;Amount of Cofounders;;Anzahl der Mitgrï¿½nder;;;;;;;;;x
+num_cofounders;Amount of Cofounders;;Anzahl der Mitgründer;;;;;;;;;x
 
 #SUCC LAWS AND STUFF
 
-electorus_desc;Elector;;Wï¿½hler;;;;;;;;;x
-opinion_cofounder;Potential Cofounder;;Potentieller Mitgrï¿½nder;;;;;;;;;;x
-opinion_cofounded;Cofounder of our Elective League;;Mitgrï¿½nder unserer Wahlliga;;;;;;;;;;x
+electorus_desc;Elector;;Wähler;;;;;;;;;x
+opinion_cofounder;Potential Cofounder;;Potentieller Mitgründer;;;;;;;;;;x
+opinion_cofounded;Cofounder of our Elective League;;Mitgründer unserer Wahlliga;;;;;;;;;;x
 
-succ_elective_league_desc; An Elective League founded by at least 3 titles.\n The holders of these titles and their most important vassal get 2+1 vote.\n;; Ein durch die Vereinigung mehrere Titel gegrï¿½ndetes Wahlreich.\n Die Grï¿½nder und Vassalen gleichen Grades bekommen 2 Stimmen. Wichtige Vassallen der Grï¿½nder 1 Stimme.\n;;;;;;;;;;x
+succ_elective_league_desc; An Elective League founded by at least 3 titles.\n The holders of these titles and their most important vassal get 2+1 vote.\n;; Ein durch die Vereinigung mehrere Titel gegründetes Wahlreich.\n Die Gründer und Vassalen gleichen Grades bekommen 2 Stimmen. Wichtige Vassallen der Gründer 1 Stimme.\n;;;;;;;;;;x
 succ_elective_league;Elective League;;Wahlliga;;;;;;;;;x
 elective_league;Elective League;;Wahlliga;;;;;;;;;x
-tooltip_EL_big_elector;Important Elector;;Wichtiger Wï¿½hler;;;;;;;;;x
+tooltip_EL_big_elector;Important Elector;;Wichtiger Wähler;;;;;;;;;x
 
 #TRIBAL
-succ_tribal_league_desc; An Tribal Elective League founded by at least 3 titles.\n The holders of these titles and their most important vassal get 2+1 vote.\n In a Tribal Elective League the title ALWAYS changes to an important elector. Be careful.\n;; Ein durch die Vereinigung mehrere Titel gegrï¿½ndetes Wahlreich.\n Die Grï¿½nder und Vassalen gleichen Grades bekommen 2 Stimmen. Wichtige Vassallen der Grï¿½nder 1 Stimme.\n Bei einer Stammeswahlliga wechselt die Krone immer in die Hï¿½nde eines anderen Wï¿½hlers. Sei vorsichtig.\n;;;;;;;;;;x
+succ_tribal_league_desc; An Tribal Elective League founded by at least 3 titles.\n The holders of these titles and their most important vassal get 2+1 vote.\n In a Tribal Elective League the title ALWAYS changes to an important elector. Be careful.\n;; Ein durch die Vereinigung mehrere Titel gegründetes Wahlreich.\n Die Gründer und Vassalen gleichen Grades bekommen 2 Stimmen. Wichtige Vassallen der Gründer 1 Stimme.\n Bei einer Stammeswahlliga wechselt die Krone immer in die Hände eines anderen Wählers. Sei vorsichtig.\n;;;;;;;;;;x
 succ_tribal_league;Tribal Elective League;;Stammeswahlliga;;;;;;;;;x
 tribal_league;Tribal Elective League;;Stammeswahlliga;;;;;;;;;x
 tooltip_TL_big_elector;Potential Leader;;Potentieller Nachfolger;;;;;;;;;x
