@@ -13,6 +13,19 @@ league_potential_trigger = {
 	}
 }
 
+religion_allows_feudal_elective_trigger = { #Maybe deprecated with the new government types?
+	custom_tooltip = {
+		text = ELECTIVE_LEAGUE_ELECTIVE_REQUIREMENT
+		OR = {
+			has_dlc = "Zeus"
+			NOR = {
+				religion_group = indian_group
+				religion_group = muslim
+			}
+		}
+	}
+}
+
 # Visible requirements for co-founding or joining leagues.
 THIS_can_join_PREV_league_trigger = {
 	# Not checked here: rank requirements (different for initial creation vs later additions)
@@ -69,19 +82,6 @@ THIS_can_join_PREV_league_trigger = {
 
 	# We like PREV enough to voluntarily create an alliance
 	opinion = { who = PREV  value = 26 }
-}
-
-religion_allows_feudal_elective_trigger = { #Maybe deprecated with the new government types?
-	custom_tooltip = {
-		text = ELECTIVE_LEAGUE_ELECTIVE_REQUIREMENT
-		OR = {
-			has_dlc = "Zeus"
-			NOR = {
-				religion_group = indian_group
-				religion_group = muslim
-			}
-		}
-	}
 }
 
 THIS_can_be_elector_of_PREV_trigger = {
