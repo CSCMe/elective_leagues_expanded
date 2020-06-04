@@ -101,7 +101,6 @@ character_event = {
                 THIS_and_FROM_are_adjacent_trigger = yes
             }
 
-            ROOT = { change_variable = { which = num_cofounders  value = 1 } }
             reverse_opinion = { who = PREV  modifier = opinion_cofounder }
             character_event = { id = ElectiveLeagues.33 }  # Bounce back here with THIS as FROM
         }
@@ -160,6 +159,7 @@ character_event = {
         }
 
         FROM = {
+            change_variable = { which = num_cofounders  value = 1 }
             character_event = { id = ElectiveLeagues.32 }
         }
         add_character_modifier = {
@@ -175,7 +175,6 @@ character_event = {
             factor = 1
         }
         FROM = { 
-            change_variable = { which = num_cofounders  value = -1 } 
             character_event = { id = ElectiveLeagues.34 days = 1 }
         }
         reverse_remove_opinion = {
@@ -221,11 +220,14 @@ character_event = {
             tier = COUNT
             OR = {
                 check_variable = { which = num_cofounders  value >= 2 }
-                any_player = {
-                    reverse_has_opinion_modifier = {
-                        who = PREV
-                        modifier = opinion_cofounder
+                AND = {
+                    any_player = {
+                        reverse_has_opinion_modifier = {
+                            who = PREV
+                            modifier = opinion_cofounder
+                        }
                     }
+                    check_variable = { which = num_cofounders  value >= 1 }
                 }
             }
             
@@ -256,11 +258,14 @@ character_event = {
             tier = DUKE
             OR = { #WENN NICHT FNKTIONIER OR ENTFERNEN UND ANY_PLAYER
                 check_variable = { which = num_cofounders  value >= 2 }
-                any_player = {
-                    reverse_has_opinion_modifier = {
-                        who = PREV
-                        modifier = opinion_cofounder
+                AND = {
+                    any_player = {
+                        reverse_has_opinion_modifier = {
+                            who = PREV
+                            modifier = opinion_cofounder
+                        }
                     }
+                    check_variable = { which = num_cofounders  value >= 1 }
                 }
             }
         }
@@ -290,11 +295,14 @@ character_event = {
             tier = KING
             OR = {
                 check_variable = { which = num_cofounders  value >= 2 }
-                any_player = {
-                    reverse_has_opinion_modifier = {
-                        who = PREV
-                        modifier = opinion_cofounder
+                AND = {
+                    any_player = {
+                        reverse_has_opinion_modifier = {
+                            who = PREV
+                            modifier = opinion_cofounder
+                        }
                     }
+                    check_variable = { which = num_cofounders  value >= 1 }
                 }
             }
         }
@@ -372,19 +380,19 @@ character_event = {
 # AI ruler of an elective league tries to vassalize more neighbors
 character_event = {
     id = ElectiveLeagues.40
+    min_age = 14
     hide_window = yes
     only_independent = yes # Excludes vassals and tributaries and counts only every count and above ruler.
     ai = yes  # Players instead use a targeted decision, vassalize_new_elector
 
     trigger = {
-        higher_real_tier_than = COUNT
-        independent = yes
-        in_revolt = no
-
         primary_title = {
             has_law = succ_feudal_elective
             is_titular = yes
         }
+        higher_real_tier_than = COUNT
+        independent = yes
+        in_revolt = no
     }
 
     mean_time_to_happen = {
@@ -394,9 +402,9 @@ character_event = {
     immediate = {
         any_independent_ruler = {
             limit = {
-                NOT = { character = ROOT }
-                league_potential_trigger = yes
                 lower_real_tier_than = PREV
+                NOT = { character = ROOT }
+                league_potential_trigger = yes           
                 THIS_can_be_elector_of_PREV_trigger = yes
                 THIS_can_join_PREV_league_trigger = yes
                 THIS_and_FROM_are_adjacent_trigger = yes  # Hoping FROM is treated as ROOT when no FROM...
