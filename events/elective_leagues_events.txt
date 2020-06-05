@@ -21,7 +21,7 @@ character_event = {
         any_independent_ruler = {
             THIS_and_PREV_same_rank_trigger = yes
             THIS_can_join_PREV_league_trigger = yes
-            THIS_and_FROM_are_adjacent_trigger = yes
+            THIS_and_FROM_are_adjacent_trigger = yes #Mark Audax
         }
     }
 
@@ -410,7 +410,7 @@ character_event = {
                 league_potential_trigger = yes           
                 THIS_can_be_elector_of_PREV_trigger = yes
                 THIS_can_join_PREV_league_trigger = yes
-                THIS_and_FROM_are_adjacent_trigger = yes  # Hoping FROM is treated as ROOT when no FROM...
+                THIS_and_FROM_are_adjacent_trigger = yes  # Hoping FROM is treated as ROOT when no FROM... #Mark Audax
                 NOT = { has_opinion_modifier = { who = ROOT  modifier = opinion_granted_independence } }
             }
             letter_event = { id = ElectiveLeagues.46 }

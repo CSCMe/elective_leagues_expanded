@@ -29,10 +29,7 @@ succession_laws = {
 			else = {
 				add_law_w_cooldown = crown_authority_0
 			}
-		}
-		revoke_allowed = {
-			always = no
-		}			
+		}	
 	}
 	succ_tribal_league = {
 		oldest_child_opinion = -17
@@ -65,8 +62,5 @@ succession_laws = {
         	    add_law_w_cooldown = crown_authority_0
         	}
 		}
-		revoke_allowed = {
-			always = no
-		}			
 	}
 }

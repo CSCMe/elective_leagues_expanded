@@ -23,7 +23,7 @@ decisions = {
             any_independent_ruler = {
                 THIS_and_PREV_same_rank_trigger = yes
                 THIS_can_join_PREV_league_trigger = yes
-                THIS_and_FROM_are_adjacent_trigger = yes
+                THIS_and_FROM_are_adjacent_trigger = yes #Mark Audax
             }
         }
 
