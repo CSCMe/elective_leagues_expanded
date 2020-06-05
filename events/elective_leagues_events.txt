@@ -18,10 +18,9 @@ character_event = {
             has_law = succ_elective_league
             has_law = succ_tribal_league
         }
-        any_independent_ruler = {
+        any_neighbor_independent_ruler = {
             THIS_and_PREV_same_rank_trigger = yes
             THIS_can_join_PREV_league_trigger = yes
-            THIS_and_FROM_are_adjacent_trigger = yes #Mark Audax
         }
     }
 
@@ -403,14 +402,13 @@ character_event = {
     }
 
     immediate = {
-        any_independent_ruler = {
+        any_neighbor_independent_ruler = {
             limit = {
                 lower_real_tier_than = PREV
                 NOT = { character = ROOT }
                 league_potential_trigger = yes           
                 THIS_can_be_elector_of_PREV_trigger = yes
                 THIS_can_join_PREV_league_trigger = yes
-                THIS_and_FROM_are_adjacent_trigger = yes  # Hoping FROM is treated as ROOT when no FROM... #Mark Audax
                 NOT = { has_opinion_modifier = { who = ROOT  modifier = opinion_granted_independence } }
             }
             letter_event = { id = ElectiveLeagues.46 }
