@@ -21,6 +21,7 @@ create_league_effect = {
         else = {
             add_law_w_cooldown = succ_elective_league
         }
+        set_title_flag = elective_league_title
 	}
 
     remove_character_modifier = founding_elective_league

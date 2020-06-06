@@ -5,9 +5,14 @@ succession_laws = {
 		dynasty_opinion = -4
 		vassal_opinion = 17
 		potential = {
-		#	is_feudal = yes
-		#	independent = yes
-			always = no
+			holder_scope = { is_feudal = yes }
+			#independent = yes
+			#always = no
+			has_title_flag = elective_league_title
+		}
+		allow = {
+			has_title_flag = elective_league_title
+			
 		}
 		effect = {
 			succession = {
@@ -37,9 +42,14 @@ succession_laws = {
 		dynasty_opinion = -7
 		vassal_opinion = 25
 		potential = {
-			#is_tribal = yes
+			holder_scope = { is_tribal = yes }
 			#independent = yes
-			always = no
+			#always = no
+			has_title_flag = elective_league_title
+		}
+		allow = {
+			has_title_flag = elective_league_title
+			
 		}
 		effect = {
 			succession = {

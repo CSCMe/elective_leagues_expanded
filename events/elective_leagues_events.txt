@@ -40,7 +40,7 @@ character_event = {
 
 
 # ROOT tries to create a new league (players from decision; AI from event ElectiveLeagues.30)
-character_event = {  #TODO: Increase timer for EL35 or check if everyone decided.
+character_event = {
     id = ElectiveLeagues.31
     is_triggered_only = yes
     hide_window = no
@@ -67,9 +67,10 @@ character_event = {  #TODO: Increase timer for EL35 or check if everyone decided
         name = elective_league_31_event_yes
         ai_chance = { factor = 100 }
         hidden_tooltip = {
+            set_character_flag = elective_league_founder 
             set_variable = { which = num_cofounders  value = 0 }
             character_event = { id = ElectiveLeagues.32 days = 1}  # Find recursively-adjacent cofounders
-            character_event = { id = ElectiveLeagues.35 days = 15}  # Show list of cofounders; allow creating a higher title if >=2 # delay 45 days
+            #character_event = { id = ElectiveLeagues.35 days = 15}  # Show list of cofounders; allow creating a higher title if >=2 # delay 45 days
         }
     }
     option = {
@@ -99,7 +100,7 @@ character_event = {
                 # ...by virtue of being adjacent to FROM (who could be ROOT or another cofounder)
                 THIS_and_FROM_are_adjacent_trigger = yes
             }
-
+            set_character_flag = invited_to_league_@ROOT
             reverse_opinion = { who = PREV  modifier = opinion_cofounder }
             character_event = { id = ElectiveLeagues.33 }  # Bounce back here with THIS as FROM
         }
@@ -181,6 +182,9 @@ character_event = {
             modifier = opinion_cofounder
         }
     }
+    after = {
+        clr_character_flag = invited_to_league_@FROM
+    }
 }
 
 #ROOT gets notified about someone refusing to join the league
@@ -198,7 +202,7 @@ letter_event = {
     }
     
     option = {
-        tooltip_info_custom = ElectiveLeagues_event_34_WROTH_TOOLTIP
+        tooltip_info = wroth
         trigger = {
             ROOT = { trait = wroth }
         }
@@ -210,9 +214,23 @@ letter_event = {
 # ROOT has counted their cofounders and may be able to create a new elective realm
 character_event = {
     id = ElectiveLeagues.35
-    is_triggered_only = yes
+    is_triggered_only = no
     desc = ElectiveLeagues_event_35_DESC
     picture = GFX_evt_state_diplomacy
+    only_playable = yes
+    has_character_flag = elective_league_founder
+
+    mean_time_to_happen = {
+        days = 16
+    }
+
+    trigger = {
+        NOT = {
+            any_independent_ruler = {
+                has_character_flag = invited_to_league_@ROOT
+            }
+        }
+    }
 
     option = {
         trigger = {
@@ -375,6 +393,9 @@ character_event = {
             }
             remove_character_modifier = founding_elective_league
         }
+    }
+    after = {
+        clr_character_flag = elective_league_founder
     }
 }
 
