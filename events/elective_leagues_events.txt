@@ -1,5 +1,5 @@
 namespace = ElectiveLeagues
-
+#TODO: add things it does when someone dies
 
 # AI ruler tries to create a new league
 character_event = {      
@@ -161,6 +161,7 @@ character_event = {
         FROM = {
             change_variable = { which = num_cofounders  value = 1 }
             character_event = { id = ElectiveLeagues.32 }
+            letter_event = { id = ElectiveLeagues.35 days = 1 }
         }
         add_character_modifier = {
             name = founding_elective_league
@@ -211,11 +212,23 @@ letter_event = {
     }
 }
 
+#ROOT gets notified about someone accepting to join the league
+letter_event = {
+    id = ElectiveLeagues.35
+    desc = ElectiveLeagues_event_35_DESC
+    #picture = GFX_evt_book_carolingian_script  # ...
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+    }
+}
+
 # ROOT has counted their cofounders and may be able to create a new elective realm
 character_event = {
-    id = ElectiveLeagues.35
+    id = ElectiveLeagues.36
     is_triggered_only = no
-    desc = ElectiveLeagues_event_35_DESC
+    desc = ElectiveLeagues_event_36_DESC
     picture = GFX_evt_state_diplomacy
     only_playable = yes
     has_character_flag = elective_league_founder
@@ -469,6 +482,7 @@ letter_event = {
         }
         name = accept_league
         add_THIS_to_FROM_existing_league_effect = yes   
+        FROM = { letter_event = { id = ElectiveLeagues.35 days = 1 } }
         any_vassal = {
             letter_event = { id = ElectiveLeagues.50 }
         }
