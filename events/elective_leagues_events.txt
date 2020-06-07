@@ -144,7 +144,28 @@ character_event = {
         FROM = {
             #change_variable = { which = num_cofounders  value = 1 }
             character_event = { id = ElectiveLeagues.32 }
-            letter_event = { id = ElectiveLeagues.35 days = 1 }
+        }
+        random_list = {
+            10 = {
+                FROM = { 
+                    letter_event = { id = ElectiveLeagues.35 days = 1 }
+                }
+            }
+            20 = {
+                FROM = { 
+                    letter_event = { id = ElectiveLeagues.35 days = 2 }
+                }
+            }
+            10 = {
+                FROM = { 
+                    letter_event = { id = ElectiveLeagues.35 days = 3 }
+                }
+            }
+            10 = {
+                FROM = { 
+                    letter_event = { id = ElectiveLeagues.35 days = 4 }
+                }
+            }
         }
         add_character_modifier = {
             name = founding_elective_league
@@ -158,8 +179,27 @@ character_event = {
         ai_chance = {
             factor = 1
         }
-        FROM = { 
-            letter_event = { id = ElectiveLeagues.34 days = 1 }
+        random_list = {
+            10 = {
+                FROM = { 
+                    letter_event = { id = ElectiveLeagues.34 days = 1 }
+                }
+            }
+            20 = {
+                FROM = { 
+                    letter_event = { id = ElectiveLeagues.34 days = 2 }
+                }
+            }
+            10 = {
+                FROM = { 
+                    letter_event = { id = ElectiveLeagues.34 days = 3 }
+                }
+            }
+            10 = {
+                FROM = { 
+                    letter_event = { id = ElectiveLeagues.34 days = 4 }
+                }
+            }
         }
         clr_character_flag = invited_to_league_@FROM
     }
