@@ -1,5 +1,5 @@
 namespace = ElectiveLeagues
-#TODO: add things it does when someone dies
+#TODO: add things it does when someone dies (don't need that cuz I smarts and everything expires after one year)
 
 # AI ruler tries to create a new league
 character_event = {      
@@ -7,13 +7,11 @@ character_event = {
     hide_window = yes
     only_playable = yes # This counts only every count and above ruler.
     ai = yes  # Players instead use a similar decision, create_elective_league
-
+    
     trigger = {
-    	#higher_real_tier_than = BARON #already  checked in league_potential_trigger
-        #is_feudal = yes
         league_potential_trigger = yes
         religion_allows_feudal_elective_trigger = yes
-        NOT = {has_character_modifier = founding_elective_league}
+        not_founding_league = yes
         NOR = {
             has_law = succ_elective_league
             has_law = succ_tribal_league
@@ -46,23 +44,7 @@ character_event = {
     hide_window = no
     picture = GFX_evt_prospering_province
     desc = ElectiveLeagues_event_31_DESC
- #   immediate = {
 
-        #any_opinion_modifier_target = {
-        #    limit = {
-        #        reverse_has_opinion_modifier = {
-        #            who = PREV
-        #            modifier = opinion_cofounder
-        #        }
-        #    }
-        #    reverse_remove_opinion = {
-        #        who = PREV
-        #        modifier = opinion_cofounder
-        #    }
-        #}
-
-
-    #}
     option = {
         name = elective_league_31_event_yes
         ai_chance = { factor = 100 }
@@ -70,7 +52,6 @@ character_event = {
             set_character_flag = elective_league_founder 
             set_variable = { which = num_cofounders  value = 0 }
             character_event = { id = ElectiveLeagues.32 days = 1}  # Find recursively-adjacent cofounders
-            #character_event = { id = ElectiveLeagues.35 days = 15}  # Show list of cofounders; allow creating a higher title if >=2 # delay 45 days
         }
     }
     option = {
@@ -101,6 +82,11 @@ character_event = {
                 THIS_and_FROM_are_adjacent_trigger = yes
             }
             set_character_flag = invited_to_league_@ROOT
+            add_character_modifier = {
+                name = invited_to_elective_league
+                hidden = yes
+                years = 1
+            }
             reverse_opinion = { who = PREV  modifier = opinion_cofounder }
             character_event = { id = ElectiveLeagues.33 }  # Bounce back here with THIS as FROM
         }
@@ -185,6 +171,9 @@ character_event = {
     }
     after = {
         clr_character_flag = invited_to_league_@FROM
+        hidden_tooltip = {
+            remove_character_modifier = invited_to_elective_league
+        }
     }
 }
 
@@ -192,7 +181,6 @@ character_event = {
 letter_event = {
     id = ElectiveLeagues.34
     desc = ElectiveLeagues_event_34_DESC
-    #picture = GFX_evt_book_carolingian_script  # ...
     is_triggered_only = yes
 
     option = {
@@ -216,7 +204,6 @@ letter_event = {
 letter_event = {
     id = ElectiveLeagues.35
     desc = ElectiveLeagues_event_35_DESC
-    #picture = GFX_evt_book_carolingian_script  # ...
     is_triggered_only = yes
 
     option = {
@@ -260,8 +247,7 @@ character_event = {
                     }
                     check_variable = { which = num_cofounders  value >= 1 }
                 }
-            }
-            
+            }   
         }
         name = ElectiveLeagues_event_35_DUCHY
         ai_chance = { factor = 97 }
@@ -429,6 +415,7 @@ character_event = {
         higher_real_tier_than = COUNT
         independent = yes
         in_revolt = no
+        not_founding_league = yes
     }
 
     mean_time_to_happen = {
@@ -469,18 +456,17 @@ character_event = {
 
 # ROOT is asked by FROM to join an existing elective league
 # Triggered by AI event ElectiveLeagues.40
-# Player decision vassalize_new_elector does NOT use this event because FROMFROM and interaction description
+# Player decision vassalize_new_elector does use the event after a bounce from EL45 to fix scopes
 letter_event = {
     id = ElectiveLeagues.46
     desc = ElectiveLeagues_event_46_DESC
-    #picture = GFX_evt_coronation  # ...
     is_triggered_only = yes
 
     option = {
+        name = accept_league
         ai_chance = { 
             factor = 10 
         }
-        name = accept_league
         add_THIS_to_FROM_existing_league_effect = yes   
         FROM = { letter_event = { id = ElectiveLeagues.35 days = 1 } }
         any_vassal = {
@@ -497,7 +483,6 @@ letter_event = {
 letter_event = {
     id = ElectiveLeagues.50
     desc = ElectiveLeagues_event_50_DESC
-    #picture = GFX_evt_coronation  # ...
     is_triggered_only = yes
 
     option = {

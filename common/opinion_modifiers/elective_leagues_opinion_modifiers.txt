@@ -1,8 +1,8 @@
 opinion_cofounder = {
-    opinion = 15
+    opinion = 12
     years = 1
 }
 opinion_cofounded = {
-    opinion = 17
+    opinion = 15
     years = 12
 }

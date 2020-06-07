@@ -1,1 +1,2 @@
 founding_elective_league = { icon = 7 }
+invited_to_elective_league = { icon = 7 }

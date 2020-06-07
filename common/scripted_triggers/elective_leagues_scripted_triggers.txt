@@ -1,15 +1,22 @@
 # Basic requirements to found, co-found, or join leagues.
 # Intended to be unseen, used in "potential" rather than "allow".
 league_potential_trigger = {
-	independent = yes
-	in_revolt = no
 	is_landed = yes
-	is_adult = yes
-	mercenary = no
+	independent = yes
 	higher_real_tier_than = BARON
+	is_adult = yes
+	in_revolt = no
+	mercenary = no
 	OR = {
 		is_feudal = yes
 		is_tribal = yes
+	}
+}
+
+not_founding_league = {
+	NOR = {
+		has_character_modifier = founding_elective_league
+		has_character_modifier = invited_to_elective_league
 	}
 }
 
@@ -31,37 +38,29 @@ THIS_can_join_PREV_league_trigger = {
 	# Not checked here: rank requirements (different for initial creation vs later additions)
 	# Not checked here: adjacency requirements (graph traversal for initial creation)
 
-	# Same religion group
-	custom_tooltip = {
-		text = SAME_RELIGION_GROUP  # Less confusing than e.g. "Is Christian"
-		religion_group = PREV
-	}
-
-	custom_tooltip = {
-		text = ELECTIVE_LEAGUE_SAME_GOVERNMENT_TYPE 
-		government = PREV
-		#OR = {
-		#	AND = {
-		#		THIS = { is_feudal = yes }
-		#		PREV = { is_feudal = yes }
-		#	}
-		#	AND = {
-		#		THIS = { is_tribal = yes }
-		#		PREV = { is_tribal = yes }
-		#	}
-		#}
-	}
-
-	is_primary_war_defender = no
-
-	#Not already in elective league
+	#Not already in elective league or founding
 	custom_tooltip = {
 		text = ELECTIVE_LEAGUE_NO_ELECTIVE_LEAGUE
 		NOR = {
 			has_law = succ_elective_league
 			has_law = succ_tribal_league
 		}
+		not_founding_league = yes
 	}
+	
+	# Same religion group
+	custom_tooltip = {
+		text = SAME_RELIGION_GROUP  # Less confusing than e.g. "Is Christian"
+		religion_group = PREV
+	}
+
+	#Same government type
+	custom_tooltip = {
+		text = ELECTIVE_LEAGUE_SAME_GOVERNMENT_TYPE 
+		government = PREV
+	}
+
+	is_primary_war_defender = no
 
 	# Ally or potential ally
 	custom_tooltip = {
@@ -77,7 +76,6 @@ THIS_can_join_PREV_league_trigger = {
 				PREV = { ai = yes }
 			}
 		}
-		NOT = {has_character_modifier = founding_elective_league}
 	}
 
 	# We like PREV enough to voluntarily create an alliance

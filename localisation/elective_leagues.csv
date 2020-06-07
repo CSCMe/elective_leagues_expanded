@@ -22,7 +22,7 @@ SAME_RELIGION_GROUP;Same religion group\n;;Gleiche Religionsgruppe\n;;;;;;;x
 ELECTIVE_LEAGUE_ELECTIVE_REQUIREMENT;Conclave DLC, or religion allows Feudal Elective succession\n;;Conclave DLC oder religion die Wahlen erlaubt\n;;;;;;;x
 ELECTIVE_LEAGUE_ALLY_ETC;Is Ally\n;;Verbündeter;;;;;;;x
 ELECTIVE_LEAGUE_SAME_GOVERNMENT_TYPE;Same government type;; Gleiche Regierungsform;;;;;;;x
-ELECTIVE_LEAGUE_NO_ELECTIVE_LEAGUE;Not already in Elective League;;Nicht in Wahlliga;;;;;;;x
+ELECTIVE_LEAGUE_NO_ELECTIVE_LEAGUE;Not already in Elective League or invited;;Nicht in Wahlliga oder eingladen;;;;;;;x
 
 ElectiveLeagues_event_35_DESC;[From.GetBestName] has accepted the offer to join our league.;;[From.GetBestName] hat unser Angebot angenommen.;;;;;;;x
 ElectiveLeagues_event_34_DESC;[From.GetBestName] has refused the offer to join our league.;;[From.GetBestName] hat unser Angebot abgelehnt.;;;;;;;x
@@ -55,12 +55,12 @@ ElectiveLeagues_event_50_Opportunity;...Or pose to be a great opportunity;;...Od
 # Effects
 NAPS_WITH_NEW_VASSALS;We sign a 20-year non-aggression pact with each cofounder, preventing us from revoking titles and preventing them from joining factions.\n;;Du unterschreibst einen 20-Jahre langen Nichtangriffspakt mit deinen Mitgründern. Dieser verhindert Titelaberkennung und das Beitreten von Fraktionen.\n;;;;;;;x
 #BYE_COUNCIL;Your council members will be relieved of their duties, allowing us to form a new council without the hassle of firing anyone\n;;;;;;;;;x
-BYE_COUNCIL;You will be able to hire new council members.\n;;Du wirst neue Ratsmitglieder einstellen müssen.\n;;;;;;;x
+BYE_COUNCIL;You will need to hire new council members.\n;;Du wirst neue Ratsmitglieder einstellen müssen.\n;;;;;;;x
 
 # SUCCESSION THINGS
 
 
-
+invited_to_elective_league;Invited to Elective League;;Zu Wahlliga eingeladen;;;;;;;;;;x
 founding_elective_league;Founding an Elective League;;Gründet eine Wahlliga;;;;;;;;;;x
 accept_league;We accept this offer.;;Wir nehmen das Angebot an.;;;;;;;;;;x
 refuse_league;We refuse!;;Wir lehnen das Angebot ab.;;;;;;;;;;x

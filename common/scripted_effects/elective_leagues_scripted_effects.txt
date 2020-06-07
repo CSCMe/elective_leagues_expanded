@@ -1,16 +1,18 @@
+#Effect when creating a new elective league
 create_league_effect = {
+    #Title Effects
 	primary_title = {
 		hidden_tooltip = {  # Hide tooltip because it would refer to old primary title
 			# TODO: if already elective, do i need sneakiness for the cooldowns?
         }
-        if = {
+        if = { #adjective
             limit = { tier = DUKE }
             adjective = ELECTIVE_REALM_ADJECTIVE_DUKE
         } 
         else = {
             adjective = "[Root.Culture.GetName]"
         }
-        if = {
+        if = { #determine which succession law (tribal, feudal)
             limit = {
               holder_scope = {
                   is_tribal = yes
@@ -24,9 +26,11 @@ create_league_effect = {
         set_title_flag = elective_league_title
 	}
 
+    #Founder Effects
     remove_character_modifier = founding_elective_league
 
-    any_opinion_modifier_target = { #Cofounders
+    #Cofounder Effects
+    any_opinion_modifier_target = { 
         limit = {
             reverse_has_opinion_modifier = {
                 who = PREV
@@ -34,18 +38,18 @@ create_league_effect = {
             }
             has_character_modifier = founding_elective_league
         }
-        any_vassal = {
-            letter_event = { id = ElectiveLeagues.50}
-        }
+
         remove_character_modifier = founding_elective_league
+
         hidden_tooltip = {
-            # Remove the computed opinion modifier
+            # Remove the tracking opinion modifier and add normal opinion modifiers
             reverse_remove_opinion = {
                 who = PREV
                 modifier = opinion_cofounder
             }
             reverse_opinion = { who = PREV  modifier = opinion_cofounded }
             opinion = { who = PREV  modifier = opinion_cofounded }
+
 	        # Create a NAP
 	        opinion = {
 	            modifier = in_non_aggression_pact
@@ -61,7 +65,12 @@ create_league_effect = {
 	                origin_description = VOLUNTARY_VASSAL
                 }
             }
-	    }
+        }
+        #Vassals get notified
+        any_vassal = {
+            letter_event = { id = ElectiveLeagues.50}
+        }
+        #Cofounder gets vassalized
         set_defacto_liege = PREV
     }
 
@@ -72,6 +81,7 @@ create_league_effect = {
     wipe_council_effect = yes
 }
 
+#Effect when somone is added to a league
 add_THIS_to_FROM_existing_league_effect = {
     set_defacto_liege = FROM
     opinion = {
@@ -87,7 +97,7 @@ add_THIS_to_FROM_existing_league_effect = {
         origin_description = VOLUNTARY_VASSAL
     }
 }
-
+#Wipes the entire council
 wipe_council_effect = {
 
     custom_tooltip = {

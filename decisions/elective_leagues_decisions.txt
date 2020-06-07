@@ -1,24 +1,19 @@
 decisions = {
-
+    #Found elective League Decision
     create_elective_league = {
 
         potential = {
             ai = no  # adjacency calculation is expensive, so ai instead uses MTTH event ElectiveLeagues.30
-            OR = {
-                real_tier = KING
-                real_tier = DUKE
-                real_tier = COUNT
-            }
             NOR = {
                 has_law = succ_elective_league
                 has_law = succ_tribal_league
             }
             league_potential_trigger = yes
+            lower_real_tier_than = EMPEROR
         }
 
         allow = {
-       #     is_feudal = yes
-            NOT = {has_character_modifier = founding_elective_league}
+            not_founding_league = yes
             religion_allows_feudal_elective_trigger = yes
             any_neighbor_independent_ruler = {
                 THIS_and_PREV_same_rank_trigger = yes
@@ -46,12 +41,19 @@ decisions = {
 #FROM is TAKER
 #ROOT is target CHARACTER
 targetted_decisions = {
-
+    #Invite to existing league decision
     vassalize_new_elector = {
 
         from_potential = {
             ai = no  # "ai_target_filter = all" is expensive, so ai instead uses MTTH event ElectiveLeagues.40
             league_potential_trigger = yes
+            primary_title = {
+                OR = {
+                    has_law = succ_elective_league
+                    has_law = succ_tribal_league
+                }
+                is_titular = yes
+            }
         }
 
         potential = {
@@ -61,14 +63,6 @@ targetted_decisions = {
 
         allow = {
             FROM = {
-                primary_title = {
-                    OR = {
-                        has_law = succ_elective_league
-                        has_law = succ_tribal_league
-                    }
-                    is_titular = yes
-                }
-
                 # Sorry for the indent, players, but it gets the scopes correct for sharing scripted triggers
                 ROOT = {
                     custom_tooltip = {
@@ -86,10 +80,9 @@ targetted_decisions = {
         }
 
         effect = {
-            FROM = {
+            FROM = { #FROM gets the Event to fix the scopes which then sends the invite to ROOT
                 character_event = { id = ElectiveLeagues.45 }
             }
-            #add_THIS_to_FROM_existing_league_effect = yes
         }
     }
 }

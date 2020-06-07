@@ -12,7 +12,6 @@ succession_laws = {
 		}
 		allow = {
 			has_title_flag = elective_league_title
-			
 		}
 		effect = {
 			succession = {
