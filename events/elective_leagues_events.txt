@@ -60,7 +60,7 @@ character_event = {
     }
 }
 
-# ROOT is counting cofounders (recursive). Realms adjacent to FROM are now eligible to join.
+# ROOT is looking for cofounders cofounders (recursive). Realms adjacent to FROM are now eligible to join.
 character_event = {
     id = ElectiveLeagues.32
     is_triggered_only = yes
@@ -72,8 +72,6 @@ character_event = {
             limit = {
                 # Not already in ROOT's league
                 NOT = { character = ROOT }
-                NOT = { reverse_has_opinion_modifier = { who = PREV  modifier = opinion_cofounder } }
-
                 # Can join ROOT's league...
                 THIS_and_PREV_same_rank_trigger = yes
                 THIS_can_join_PREV_league_trigger = yes
@@ -87,7 +85,6 @@ character_event = {
                 hidden = yes
                 years = 1
             }
-            reverse_opinion = { who = PREV  modifier = opinion_cofounder }
             character_event = { id = ElectiveLeagues.33 }  # Bounce back here with THIS as FROM
         }
     }
@@ -145,7 +142,7 @@ character_event = {
         }
 
         FROM = {
-            change_variable = { which = num_cofounders  value = 1 }
+            #change_variable = { which = num_cofounders  value = 1 }
             character_event = { id = ElectiveLeagues.32 }
             letter_event = { id = ElectiveLeagues.35 days = 1 }
         }
@@ -164,13 +161,9 @@ character_event = {
         FROM = { 
             letter_event = { id = ElectiveLeagues.34 days = 1 }
         }
-        reverse_remove_opinion = {
-            who = FROM
-            modifier = opinion_cofounder
-        }
+        clr_character_flag = invited_to_league_@FROM
     }
     after = {
-        clr_character_flag = invited_to_league_@FROM
         hidden_tooltip = {
             remove_character_modifier = invited_to_elective_league
         }
@@ -227,11 +220,23 @@ character_event = {
     trigger = {
         NOT = {
             any_independent_ruler = {
-                has_character_flag = invited_to_league_@ROOT
+                AND = {
+                    has_character_flag = invited_to_league_@ROOT
+                    has_character_modifier = invited_to_elective_league
+                }
             }
         }
     }
-
+    #Count cofounders here to account for random deaths?
+    immediate = {
+        any_independent_ruler = {
+            limit = {
+                has_character_flag = invited_to_league_@ROOT
+                has_character_modifier = founding_elective_league
+            }
+            ROOT = { change_variable = { which = num_cofounders value = 1}}
+        }
+    }
     option = {
         trigger = {
             tier = COUNT
@@ -239,10 +244,7 @@ character_event = {
                 check_variable = { which = num_cofounders  value >= 2 }
                 AND = {
                     any_player = {
-                        reverse_has_opinion_modifier = {
-                            who = PREV
-                            modifier = opinion_cofounder
-                        }
+                        has_character_flag = invited_to_league_@ROOT
                         has_character_modifier = founding_elective_league
                     }
                     check_variable = { which = num_cofounders  value >= 1 }
@@ -277,10 +279,7 @@ character_event = {
                 check_variable = { which = num_cofounders  value >= 2 }
                 AND = {
                     any_player = {
-                        reverse_has_opinion_modifier = {
-                            who = PREV
-                            modifier = opinion_cofounder
-                        }
+                        has_character_flag = invited_to_league_@ROOT
                         has_character_modifier = founding_elective_league
                     }
                     check_variable = { which = num_cofounders  value >= 1 }
@@ -315,10 +314,7 @@ character_event = {
                 check_variable = { which = num_cofounders  value >= 2 }
                 AND = {
                     any_player = {
-                        reverse_has_opinion_modifier = {
-                            who = PREV
-                            modifier = opinion_cofounder
-                        }
+                        has_character_flag = invited_to_league_@ROOT
                         has_character_modifier = founding_elective_league
                     }
                     check_variable = { which = num_cofounders  value >= 1 }
@@ -353,20 +349,14 @@ character_event = {
              check_variable = { which = num_cofounders  value >= 2 }
         }
         remove_character_modifier = founding_elective_league
-        any_opinion_modifier_target = {
+        any_independent_ruler = {
             limit = {
-                reverse_has_opinion_modifier = {
-                    who = PREV
-                    modifier = opinion_cofounder
-                }
+                has_character_flag = invited_to_league_@ROOT
             }
             hidden_tooltip = {
-                reverse_remove_opinion = {
-                    who = PREV
-                    modifier = opinion_cofounder
-                }
+                clr_character_flag = invited_to_league_@ROOT
+                remove_character_modifier = founding_elective_league
             }
-            remove_character_modifier = founding_elective_league
         }
     }
 
@@ -377,20 +367,14 @@ character_event = {
              check_variable = { which = num_cofounders  value < 2 }
         }
         remove_character_modifier = founding_elective_league
-        any_opinion_modifier_target = {
+        any_independent_ruler = {
             limit = {
-                reverse_has_opinion_modifier = {
-                    who = PREV
-                    modifier = opinion_cofounder
-                }
+                has_character_flag = invited_to_league_@ROOT
             }
             hidden_tooltip = {
-                reverse_remove_opinion = {
-                    who = PREV
-                    modifier = opinion_cofounder
-                }
+                clr_character_flag = invited_to_league_@ROOT
+                remove_character_modifier = founding_elective_league
             }
-            remove_character_modifier = founding_elective_league
         }
     }
     after = {

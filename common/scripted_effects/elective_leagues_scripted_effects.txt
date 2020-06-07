@@ -30,23 +30,14 @@ create_league_effect = {
     remove_character_modifier = founding_elective_league
 
     #Cofounder Effects
-    any_opinion_modifier_target = { 
+    any_independent_ruler = {
         limit = {
-            reverse_has_opinion_modifier = {
-                who = PREV
-                modifier = opinion_cofounder
-            }
+            has_character_flag = invited_to_league_@ROOT
             has_character_modifier = founding_elective_league
         }
-
-        remove_character_modifier = founding_elective_league
-
         hidden_tooltip = {
-            # Remove the tracking opinion modifier and add normal opinion modifiers
-            reverse_remove_opinion = {
-                who = PREV
-                modifier = opinion_cofounder
-            }
+            clr_character_flag = invited_to_league_@ROOT
+            remove_character_modifier = founding_elective_league
             reverse_opinion = { who = PREV  modifier = opinion_cofounded }
             opinion = { who = PREV  modifier = opinion_cofounded }
 
