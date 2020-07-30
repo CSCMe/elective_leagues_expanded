@@ -260,10 +260,8 @@ character_event = {
     trigger = {
         NOT = {
             any_independent_ruler = {
-                AND = {
-                    has_character_flag = invited_to_league_@ROOT
-                    has_character_modifier = invited_to_elective_league
-                }
+                has_character_flag = invited_to_league_@ROOT
+                has_character_modifier = invited_to_elective_league
             }
         }
     }
