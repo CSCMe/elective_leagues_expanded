@@ -31,7 +31,7 @@ ElectiveLeagues_event_34_DESC;[From.GetBestName] has refused the offer to join o
 ElectiveLeagues_event_35_DESC;[From.GetBestName] has accepted the offer to join our league.;;[From.GetBestName] hat unser Angebot angenommen.;;;;;;;x
 ElectiveLeagues_event_36_DESC;After going through all the letters and remembering the messengers that arrived at your court, you seem to have [Root.num_cofounders.GetValue] possible co-founders.\nYou can declare your Elective League once you have at least 2 co-founders.;;Ich habe momentan [Root.num_cofounders.GetValue] Mitgründer. \nMit mindestens 2 Mitgründern oder einem Spieler kann ich einen höheren Titel erstellen!;;;;;;;x
 
-ElectiveLeagues_event_50_DESC;Your liege decided to join an Elective League with other rulers.;;Dein Lehnsherr hat sich dazu entschieden einem Wahlbund beizutreten.;;;;;;;x
+ElectiveLeagues_event_50_DESC;Your liege decided to join an Elective League with other rulers. His most powerful vassal will also be an elector.;;Dein Lehnsherr hat sich dazu entschieden einem Wahlbund beizutreten.;;;;;;;x
 ElectiveLeagues_event_46_DESC;We have received a letter:\n "I have decided to strengthen our alliance.\n I hereby offer you my full protection as liege lord in my Elective League.\n A seat as an elector in our Elective League is guaranteed if you do decide to join us.";;Wir haben einen Brief mit dem Angebot bekommen,\n uns einem Wahlbund anzuschließen.\n Falls wir dieses Angebot annehmen, werden wir ein Wähler im Wahlreich.;;;;;;;x
 
 # Titles created by the big event

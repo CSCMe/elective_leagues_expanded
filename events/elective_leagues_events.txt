@@ -118,9 +118,7 @@ character_event = {
             }
             modifier = {
                 factor = 0.1
-                OR = {
-                    trait = ambitious
-                }
+                trait = ambitious
             }
             modifier = {
                 factor = 0.2
