@@ -9,7 +9,46 @@ elective_league = {
 	elector_stances ={
 		electorus = {
 			icon = 4 
-			days = 1
+			days = 0
+			additive_modifier = {
+				OR = {
+					AND = {
+						real_tier = KING
+						FROMFROM = { real_tier = EMPEROR }
+					}
+					AND = {
+						real_tier = DUKE
+						FROMFROM = { real_tier = KING }
+					}
+					AND = {
+						real_tier = COUNT
+						FROMFROM = { real_tier = DUKE }
+					}
+					independent = yes
+				}
+				value = 1
+			}
+		}
+		vassal_elector = {
+			icon = 4 
+			days = 0
+			additive_modifier = {
+				OR = {
+					AND = {
+						NOT={ real_tier = KING }
+						FROMFROM = { real_tier = EMPEROR }
+					}
+					AND = {
+						NOT={ real_tier = DUKE }
+						FROMFROM = { real_tier = KING }
+					}
+					AND = {
+						NOT={ real_tier = COUNT }
+						FROMFROM = { real_tier = DUKE }
+					}
+				}
+				value = 1
+			}
 		}
 	}
 	elector_vote_strength = {
@@ -3414,7 +3453,46 @@ tribal_league = {
 	elector_stances ={
 		electorus = {
 			icon = 4 
-			days = 1
+			days = 0
+			additive_modifier = {
+				OR = {
+					AND = {
+						real_tier = KING
+						FROMFROM = { real_tier = EMPEROR }
+					}
+					AND = {
+						real_tier = DUKE
+						FROMFROM = { real_tier = KING }
+					}
+					AND = {
+						real_tier = COUNT
+						FROMFROM = { real_tier = DUKE }
+					}	
+					independent = yes
+				}
+				value = 1
+			}
+		}
+		vassal_elector = {
+			icon = 4 
+			days = 0
+			additive_modifier = {
+				OR = {
+					AND = {
+						NOT={ real_tier = KING }
+						FROMFROM = { real_tier = EMPEROR }
+					}
+					AND = {
+						NOT={ real_tier = DUKE }
+						FROMFROM = { real_tier = KING }
+					}
+					AND = {
+						NOT={ real_tier = COUNT }
+						FROMFROM = { real_tier = DUKE }
+					}
+				}
+				value = 1
+			}
 		}
 	}
 	elector_vote_strength = {

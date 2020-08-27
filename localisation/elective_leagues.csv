@@ -68,7 +68,7 @@ refuse_league;We refuse!;;Wir lehnen das Angebot ab.;;;;;;;;;;x
 num_cofounders;Amount of Co-founders;;Anzahl der Mitgründer;;;;;;;;;x
 
 #SUCC LAWS AND STUFF
-
+vassal_elector_desc;Vassal-Elector;;Wählervassal;;;;;;;;;x
 electorus_desc;Elector;;Wähler;;;;;;;;;x
 opinion_cofounder;Potential Cofounder;;Potentieller Mitgründer;;;;;;;;;;x
 opinion_cofounded;Co-founder of our Elective League;;Mitgründer unseres Wahlbunds;;;;;;;;;;x

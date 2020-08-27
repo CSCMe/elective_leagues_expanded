@@ -108,11 +108,11 @@ character_event = {
         ai_chance = { 
             factor = 95 
             modifier = {
-                factor = 0.001
+                factor = 0.01
                 realm_size >= 250
             }
             modifier = {
-                factor = 0.01
+                factor = 0.05
                 realm_size >= 150
                 NOT = { realm_size >= 250}
             }
@@ -138,10 +138,13 @@ character_event = {
             modifier = {
                 factor = 1.5
                 OR = {
-                    trait = trusting
                     trait = gregarious
                     trait = shrewd
                 }
+            }
+            modifier = {
+                factor = 6
+                trait = trusting
             }
         }
 
