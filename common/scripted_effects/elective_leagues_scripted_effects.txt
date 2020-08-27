@@ -28,13 +28,14 @@ create_league_effect = {
 
     #Founder Effects
     remove_character_modifier = founding_elective_league
-
+    prestige = 200
     #Cofounder Effects
     any_independent_ruler = {
         limit = {
             has_character_flag = invited_to_league_@ROOT
             has_character_modifier = founding_elective_league
         }
+        prestige = 50
         hidden_tooltip = {
             clr_character_flag = invited_to_league_@ROOT
             remove_character_modifier = founding_elective_league

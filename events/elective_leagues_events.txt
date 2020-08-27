@@ -106,15 +106,21 @@ character_event = {
         name = accept_league
 
         ai_chance = { 
-            factor = 99 
+            factor = 95 
             modifier = {
-                factor = 0.01
+                factor = 0.001
                 realm_size >= 250
             }
             modifier = {
-                factor = 0.02
+                factor = 0.01
                 realm_size >= 150
                 NOT = { realm_size >= 250}
+            }
+            modifier = {
+                factor = 0.1
+                OR = {
+                    trait = ambitious
+                }
             }
             modifier = {
                 factor = 0.2
@@ -179,7 +185,7 @@ character_event = {
     option = {
         name = refuse_league
         ai_chance = {
-            factor = 1
+            factor = 5
         }
         hidden_tooltip = {
             random_list = {

@@ -26,10 +26,10 @@ ELECTIVE_LEAGUE_NO_ELECTIVE_LEAGUE;Not already in Elective League or invited;;Ni
 
 ElectiveLeagues_event_31_DESC;After a lot of consideration you have decided that it's time to change the state of your region. Your closest allies and you shall band together and unite under one banner, one crown, and be even more interdependent than you have ever been. \n\nYou shall found an Elective League, with you as its first ruler.\n\nBe it for your own empowerment, self-defence or a wish for peace: Such a thing has rarely been attempted and succeeded.;;Endlich habe ich die Entschlossenheit gefunden meine Verbündeten zu einem Wahlbund einzuladen.\n Sei es für Ermächtigung, Selbstverteidigung oder Friedenswille:\n Eine solche Liga wurde selten versucht und die Zeiten überlebt.;;;;;;x
 ElectiveLeagues_event_32_DESC;[From.GetBestName] has joined our league!;;[From.GetBestName] ist unserer Liga beigetreten!;;;;;;;x
-ElectiveLeagues_event_33_DESC;A messenger of [From.GetTitledNameWithNick] of has arrived at your gates.\nThey tells you that [From.GetDynName] is trying to found an Elective League, with [From.GetHerHim] as the first ruler. [From.GetSheHe] has invited you to join [From.GetHerHim] and become one of his cofounders.;;[From.GetBestName] will eine neues Reich als Wahlbund aufbauen. \nMan hat uns dazu eingeladen. \nEine Wahllige erhöht unsere gemeinsame Macht, allerdings werden wir ein Vassal in dem neuen Wahlreich.\n Nehmt ihr die Einladung an?;;;;;;;x
+ElectiveLeagues_event_33_DESC;A messenger of [From.GetTitledNameWithNick] of has arrived at your gates.\nThey tells you that [From.GetDynName] is trying to found an Elective League, with [From.GetHerHim] as the first ruler. [From.GetSheHeCap] has invited you to join [From.GetHerHim] and become one of his co-founders.;;[From.GetBestName] will eine neues Reich als Wahlbund aufbauen. \nMan hat uns dazu eingeladen. \nEine Wahllige erhöht unsere gemeinsame Macht, allerdings werden wir ein Vassal in dem neuen Wahlreich.\n Nehmt ihr die Einladung an?;;;;;;;x
 ElectiveLeagues_event_34_DESC;[From.GetBestName] has refused the offer to join our league.;;[From.GetBestName] hat unser Angebot abgelehnt.;;;;;;;x
 ElectiveLeagues_event_35_DESC;[From.GetBestName] has accepted the offer to join our league.;;[From.GetBestName] hat unser Angebot angenommen.;;;;;;;x
-ElectiveLeagues_event_36_DESC;After going through all the letters and remembering the messengers that arrived at your court, you seem to have [Root.num_cofounders.GetValue] possible co-founders.\nYou can declare your Elective League once you have at least 2 cofounders.;;Ich habe momentan [Root.num_cofounders.GetValue] Mitgründer. \nMit mindestens 2 Mitgründern oder einem Spieler kann ich einen höheren Titel erstellen!;;;;;;;x
+ElectiveLeagues_event_36_DESC;After going through all the letters and remembering the messengers that arrived at your court, you seem to have [Root.num_cofounders.GetValue] possible co-founders.\nYou can declare your Elective League once you have at least 2 co-founders.;;Ich habe momentan [Root.num_cofounders.GetValue] Mitgründer. \nMit mindestens 2 Mitgründern oder einem Spieler kann ich einen höheren Titel erstellen!;;;;;;;x
 
 ElectiveLeagues_event_50_DESC;Your liege decided to join an Elective League with other rulers.;;Dein Lehnsherr hat sich dazu entschieden einem Wahlbund beizutreten.;;;;;;;x
 ElectiveLeagues_event_46_DESC;We have received a letter:\n "I have decided to strengthen our alliance.\n I hereby offer you my full protection as liege lord in my Elective League.\n A seat as an elector in our Elective League is guaranteed if you do decide to join us.";;Wir haben einen Brief mit dem Angebot bekommen,\n uns einem Wahlbund anzuschließen.\n Falls wir dieses Angebot annehmen, werden wir ein Wähler im Wahlreich.;;;;;;;x
@@ -65,13 +65,13 @@ invited_to_elective_league;Invited to Elective League;;Zu Wahlbund eingeladen;;;
 founding_elective_league;Founding an Elective League;;Gründet einen Wahlbund;;;;;;;;;;x
 accept_league;We accept this offer.;;Wir nehmen das Angebot an.;;;;;;;;;;x
 refuse_league;We refuse!;;Wir lehnen das Angebot ab.;;;;;;;;;;x
-num_cofounders;Amount of Cofounders;;Anzahl der Mitgründer;;;;;;;;;x
+num_cofounders;Amount of Co-founders;;Anzahl der Mitgründer;;;;;;;;;x
 
 #SUCC LAWS AND STUFF
 
 electorus_desc;Elector;;Wähler;;;;;;;;;x
 opinion_cofounder;Potential Cofounder;;Potentieller Mitgründer;;;;;;;;;;x
-opinion_cofounded;Cofounder of our Elective League;;Mitgründer unseres Wahlbunds;;;;;;;;;;x
+opinion_cofounded;Co-founder of our Elective League;;Mitgründer unseres Wahlbunds;;;;;;;;;;x
 
 succ_elective_league_desc; An Elective League founded by at least 3 titles.\n The holders of these titles and their most important vassal get 2+1 vote.\n;; Ein durch die Vereinigung mehrere Titel gegründetes Wahlreich.\n Die Gründer und Vassalen gleichen Grades bekommen 2 Stimmen. Wichtige Vassallen der Gründer 1 Stimme.\n;;;;;;;;;;x
 succ_elective_league;Elective League;;Wahlbund;;;;;;;;;x

@@ -13,6 +13,7 @@ decisions = {
         }
 
         allow = {
+            NOT={trait = content}
             not_founding_league = yes
             religion_allows_feudal_elective_trigger = yes
             any_neighbor_independent_ruler = {
@@ -36,7 +37,7 @@ decisions = {
                 }
             }
             prestige = -100
-            wealth  = 250
+            wealth  = -250
         }
     }
 }
