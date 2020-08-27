@@ -32,13 +32,13 @@ character_event = {
             hidden = no
             years = 1
         }
-        character_event = { id = ElectiveLeagues.31 }
+        long_character_event = { id = ElectiveLeagues.31 }
     }
 }
 
 
 # ROOT tries to create a new league (players from decision; AI from event ElectiveLeagues.30)
-character_event = {
+long_character_event = {
     id = ElectiveLeagues.31
     is_triggered_only = yes
     hide_window = no
@@ -145,25 +145,27 @@ character_event = {
             #change_variable = { which = num_cofounders  value = 1 }
             character_event = { id = ElectiveLeagues.32 }
         }
-        random_list = {
-            10 = {
-                FROM = { 
-                    letter_event = { id = ElectiveLeagues.35 days = 1 }
+        hidden_tooltip = {
+            random_list = {
+                10 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.35 days = 1 }
+                    }
                 }
-            }
-            20 = {
-                FROM = { 
-                    letter_event = { id = ElectiveLeagues.35 days = 2 }
+                20 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.35 days = 2 }
+                    }
                 }
-            }
-            10 = {
-                FROM = { 
-                    letter_event = { id = ElectiveLeagues.35 days = 3 }
+                10 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.35 days = 3 }
+                    }
                 }
-            }
-            10 = {
-                FROM = { 
-                    letter_event = { id = ElectiveLeagues.35 days = 4 }
+                10 = {
+                  FROM = { 
+                        letter_event = { id = ElectiveLeagues.35 days = 4 }
+                    }
                 }
             }
         }
@@ -179,25 +181,27 @@ character_event = {
         ai_chance = {
             factor = 1
         }
-        random_list = {
-            10 = {
-                FROM = { 
-                    letter_event = { id = ElectiveLeagues.34 days = 1 }
+        hidden_tooltip = {
+            random_list = {
+                10 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.34 days = 1 }
+                    }
                 }
-            }
-            20 = {
-                FROM = { 
-                    letter_event = { id = ElectiveLeagues.34 days = 2 }
+                20 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.34 days = 2 }
+                    }
                 }
-            }
-            10 = {
-                FROM = { 
-                    letter_event = { id = ElectiveLeagues.34 days = 3 }
+                10 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.34 days = 3 }
+                    }
                 }
-            }
-            10 = {
-                FROM = { 
-                    letter_event = { id = ElectiveLeagues.34 days = 4 }
+                10 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.34 days = 4 }
+                    }
                 }
             }
         }
@@ -465,10 +469,14 @@ character_event = {
     id = ElectiveLeagues.45
     is_triggered_only = yes
     hide_window = yes
-
     immediate = {
         FROM = {
             letter_event = { id = ElectiveLeagues.46 days = 1}
+            add_character_modifier = {
+                name = invited_to_elective_league
+                hidden = yes
+                years = 1
+            }
         }
     }
     #option = { #in case I make visible for debugs

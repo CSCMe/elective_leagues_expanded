@@ -19,13 +19,15 @@ decisions = {
                 THIS_and_PREV_same_rank_trigger = yes
                 THIS_can_join_PREV_league_trigger = yes
             }
+            prestige = 150
+            wealth  = 250
         }
 
         effect = {
             custom_tooltip = {
                 text = create_elective_league_effect
                 hidden_tooltip = {
-                    character_event = { id = ElectiveLeagues.31 }
+                    long_character_event = { id = ElectiveLeagues.31 }
                 }
                 add_character_modifier = {
                     name = founding_elective_league
@@ -33,6 +35,8 @@ decisions = {
                     years = 1
                 }
             }
+            prestige = -100
+            wealth  = 250
         }
     }
 }
@@ -59,6 +63,7 @@ targetted_decisions = {
         potential = {
             NOT = { character = FROM }
             league_potential_trigger = yes
+            not_founding_league = yes
         }
 
         allow = {
@@ -69,7 +74,7 @@ targetted_decisions = {
                         text = LOWER_RANK_THAN_US
                         lower_real_tier_than = PREV
                     }
-
+                    not_founding_league = yes
                     THIS_can_be_elector_of_PREV_trigger = yes
                     THIS_can_join_PREV_league_trigger = yes
                     THIS_and_FROM_are_adjacent_trigger = yes

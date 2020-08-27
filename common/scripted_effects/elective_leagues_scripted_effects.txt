@@ -81,6 +81,7 @@ add_THIS_to_FROM_existing_league_effect = {
         who = FROM
         origin_description = VOLUNTARY_LIEGE
     }
+    remove_character_modifier = founding_elective_league
     reverse_opinion = {
         modifier = in_non_aggression_pact
         years = 20
