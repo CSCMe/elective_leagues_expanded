@@ -8,7 +8,7 @@
 elective_league = {
 	elector_stances ={
 		electorus = {
-			icon = 4 
+			icon = 7
 			days = 0
 			additive_modifier = {
 				OR = {
@@ -30,7 +30,7 @@ elective_league = {
 			}
 		}
 		vassal_elector = {
-			icon = 4 
+			icon = 8 
 			days = 0
 			additive_modifier = {
 				OR = {
@@ -3452,7 +3452,7 @@ elective_league = {
 tribal_league = {
 	elector_stances ={
 		electorus = {
-			icon = 4 
+			icon = 7
 			days = 0
 			additive_modifier = {
 				OR = {
@@ -3474,7 +3474,7 @@ tribal_league = {
 			}
 		}
 		vassal_elector = {
-			icon = 4 
+			icon = 8
 			days = 0
 			additive_modifier = {
 				OR = {

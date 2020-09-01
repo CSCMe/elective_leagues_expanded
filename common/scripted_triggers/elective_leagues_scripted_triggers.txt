@@ -68,11 +68,11 @@ THIS_can_join_PREV_league_trigger = {
 		OR = {
 			is_allied_with = PREV                # Strong ally
 			AND = {
-				OR = {
-					is_friend = PREV                     # Weak ally
+				#OR = {
+					#is_friend = PREV                     # Weak ally
 					has_non_aggression_pact_with = PREV  # Potential ally, even if the AI hasn't bothered
-					is_close_relative = PREV             # Potential ally, even if the AI hasn't bothered
-				}
+					#is_close_relative = PREV             # Potential ally, even if the AI hasn't bothered
+				#}
 				PREV = { ai = yes }
 			}
 		}
