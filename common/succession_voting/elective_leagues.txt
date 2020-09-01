@@ -3342,6 +3342,7 @@ elective_league = {
 						FROM = { real_tier = KING }
 					}
 					FROMFROM = { real_tier = EMPEROR }
+					FROM = { is_vassal_or_below_of = ROOT}		
 				}
 				AND = {
 					OR = {
@@ -3355,6 +3356,7 @@ elective_league = {
 						FROM = { real_tier = DUKE }
 					}
 					FROMFROM = { real_tier = KING }
+					FROM = { is_vassal_or_below_of = ROOT}	
 				}
 				AND = {
 					OR = {
@@ -3368,6 +3370,7 @@ elective_league = {
 						FROM = { real_tier = COUNT }
 					}
 					FROMFROM = { real_tier = DUKE }
+					FROM = { is_vassal_or_below_of = ROOT}	
 				}
 			}
 		}
@@ -6788,6 +6791,7 @@ tribal_league = {
 						FROM = { real_tier = KING }
 					}
 					FROMFROM = { real_tier = EMPEROR }
+					FROM = { is_vassal_or_below_of = ROOT}	
 				}
 				AND = {
 					OR = {
@@ -6802,6 +6806,7 @@ tribal_league = {
 						FROM = { real_tier = DUKE }
 					}
 					FROMFROM = { real_tier = KING }
+					FROM = { is_vassal_or_below_of = ROOT}	
 				}
 				AND = {
 					OR = {
@@ -6815,6 +6820,7 @@ tribal_league = {
 						FROM = { real_tier = COUNT }
 					}
 					FROMFROM = { real_tier = DUKE }
+					FROM = { is_vassal_or_below_of = ROOT}	
 				}
 			}
 		}
