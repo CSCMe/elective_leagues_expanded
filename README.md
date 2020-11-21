@@ -7,4 +7,4 @@ League titles are titular. Since all vassals can vote in titular realms, you can
 
 AI can also partner with potential allies (NAPs and close relatives) and effective allies (friends and tributaries). In all cases, opinion must be at least 26.
 
-You can download it on [Steam]https://steamcommunity.com/sharedfiles/filedetails/?id=2211041200
+You can download it on [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2211041200)
