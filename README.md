@@ -7,4 +7,6 @@ League titles are titular. Since all vassals can vote in titular realms, you can
 
 AI can also partner with potential allies (NAPs and close relatives) and effective allies (friends and tributaries). In all cases, opinion must be at least 26.
 
+This version of the mod is an edit of jruderman's [Elective Leagues](https://github.com/gavelkind/elective_leagues) made with his permission.
+
 You can download it on [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2211041200)
