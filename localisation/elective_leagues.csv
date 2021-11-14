@@ -7,7 +7,7 @@ create_elective_league_effect;Tally partners who are adjacent to my realm, inclu
 
 # Targeted Decisions
 vassalize_new_elector;Vassalize New Elector;;Wähler vassalisieren;;;;;;;x
-vassalize_new_elector_desc;We can vassalize allies who would become electors in our league.;;Wir können Verbuendete vassalisieren wenn sie Wähler in der Liga werden.;;;;;;;x
+vassalize_new_elector_desc;We can vassalize allies who would become electors in our league.;;Wir können Verbündete vassalisieren wenn sie Wähler in der Liga werden.;;;;;;;x
 
 # Opinion modifier origins (appears as hover reason for non-aggression pact)
 VOLUNTARY_LIEGE;Voluntary liege;;Freiwilliger Lehnsherr;;;;;;;x
@@ -17,7 +17,7 @@ VOLUNTARY_VASSAL;Voluntary vassal;;Freiwilliger Vassal;;;;;;;x
 ADJACENT_REALM;Adjacent realm\n;;Angrenzendes Reich\n;;;;;;;x
 LOWER_RANK_THAN_US;Lower rank than us\n;;Niederigerer Rang als wir\n;;;;;;;x
 SAME_RANK;Same rank\n;;Gleicher Rang\n;;;;;;;x
-CAN_BE_ELECTOR;High enough rank to vote in our elections\n;;Rank ist hoch genug um ein Wahler zu sein\n;;;;;;;x
+CAN_BE_ELECTOR;High enough rank to vote in our elections\n;;Rank ist hoch genug um ein Wähler zu sein\n;;;;;;;x
 SAME_RELIGION_GROUP;Same religion group\n;;Gleiche Religionsgruppe\n;;;;;;;x
 ELECTIVE_LEAGUE_ELECTIVE_REQUIREMENT;Conclave DLC, or religion allows Feudal Elective succession\n;;Conclave DLC oder religion die Wahlen erlaubt\n;;;;;;;x
 ELECTIVE_LEAGUE_ALLY_ETC;Is Ally\n;;Verbündeter;;;;;;;x
@@ -79,7 +79,17 @@ elective_league;Elective League;;Wahlbund;;;;;;;;;x
 tooltip_EL_big_elector;Important Elector;;Wichtiger Wähler;;;;;;;;;x
 
 #TRIBAL
-succ_tribal_league_desc; An Tribal Elective League founded by at least 3 titles.\n The holders of these titles and their most important vassal get 2+1 vote.\n In a Tribal Elective League the title ALWAYS changes to an important elector. Be careful.\n;; Ein durch die Vereinigung mehrere Titel gegründetes Wahlreich.\n Die Gründer und Vassalen gleichen Grades bekommen 2 Stimmen. Wichtige Vassallen der Gründer 1 Stimme.\n Bei einem Stammeswahlbund wechselt die Krone immer in die Hände eines anderen Wählers. Sei vorsichtig.\n;;;;;;;;;;x
+succ_tribal_league_desc; A Tribal Elective League founded by at least 3 titles.\nThe holders of these titles and their most important vassal get 2+1 vote.\nIn a Tribal Elective League the title ALWAYS changes to an important elector. Be careful.\n;; Ein durch die Vereinigung mehrere Titel gegründetes Wahlreich.\nDie Gründer und Vassalen gleichen Grades bekommen 2 Stimmen. Wichtige Vassallen der Gründer 1 Stimme.\n Bei einem Stammeswahlbund wechselt die Krone immer in die Hände eines anderen Wählers. Sei vorsichtig.\n;;;;;;;;;;x
 succ_tribal_league;Tribal Elective League;;Stammeswahlbund;;;;;;;;;x
 tribal_league;Tribal Elective League;;Stammeswahlbund;;;;;;;;;x
 tooltip_TL_big_elector;Potential Leader;;Potentieller Nachfolger;;;;;;;;;x
+
+#RULES
+RULE_ELECTIVE_LEAGUES;Elective Leages;;Wahlligen;;;;;;;x
+RULE_GROUP_ELECTIVE_LEAGUES;Elective Leages;;Wahlligen;;;;;;;x
+RULE_LEAGUES_ALL_TEXT;All;;Alle;;;;;;;x
+RULE_LEAGUES_ALL_DESC;Players and AI can found and expand Elective Leagues;;Spieler und KI können Wahlligen gründen und erweitern;;;;;;;x
+RULE_LEAGUES_AI_LIMITED_TEXT;AI Limited;;KI Beschränkt;;;;;;;x
+RULE_LEAGUES_AI_LIMITED_DESC;Players and AI can found Elective Leagues. Only Players can expand them diplomatically;;Spieler und KI können Wahlligen gründen. Nur Spieler können die Liga diplomatisch erweitern;;;;;;;x
+RULE_LEAGUES_PLAYER_ONLY_TEXT;Player only;;Nur Spieler;;;;;;;x
+RULE_LEAGUES_PLAYER_ONLY_DESC;Only Players can found and expand Elective Leagues;;Nur Spieler können Wahlligen gründen und diplomatisch erweitern;;;;;;;x

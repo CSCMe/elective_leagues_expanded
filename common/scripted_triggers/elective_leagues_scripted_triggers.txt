@@ -85,10 +85,10 @@ THIS_can_join_PREV_league_trigger = {
 THIS_can_be_elector_of_PREV_trigger = {
 	custom_tooltip = {
 		text = CAN_BE_ELECTOR
-		# Counts are only electors in duchies. Dukes and kings are always electors.
 	    OR = {
-	        higher_real_tier_than = COUNT
-	        PREV = { tier = DUKE }
+	        AND = { real_tier = COUNT    PREV = { tier = DUKE    } }
+			AND = { real_tier = DUKE     PREV = { tier = KING    } }
+			AND = { real_tier = KING     PREV = { tier = EMPEROR } }
 	    }
 	}
 }

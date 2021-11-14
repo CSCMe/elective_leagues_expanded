@@ -7,8 +7,14 @@ character_event = {
     hide_window = yes
     only_playable = yes # This counts only every count and above ruler.
     ai = yes  # Players instead use a similar decision, create_elective_league
-    
+
     trigger = {
+        NOT = {
+            has_game_rule = {
+                name = elective_leagues
+                value = leagues_player_only
+            }
+        }
         league_potential_trigger = yes
         religion_allows_feudal_elective_trigger = yes
         not_founding_league = yes
@@ -442,8 +448,15 @@ character_event = {
 
     trigger = {
         primary_title = {
-            has_law = succ_feudal_elective
+            OR = {
+                has_law = succ_tribal_league
+                has_law = succ_elective_league
+            }
             is_titular = yes
+        }
+        has_game_rule = {
+            name = elective_leagues
+            value = leagues_all
         }
         higher_real_tier_than = COUNT
         independent = yes
@@ -452,7 +465,7 @@ character_event = {
     }
 
     mean_time_to_happen = {
-        years = 1
+        years = 2
     }
 
     immediate = {
