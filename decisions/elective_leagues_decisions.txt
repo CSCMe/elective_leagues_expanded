@@ -14,7 +14,7 @@ decisions = {
 
         allow = {
             NOT={trait = content}
-            not_founding_league = yes
+            not_founding_or_refused_league = yes
             religion_allows_feudal_elective_trigger = yes
             any_neighbor_independent_ruler = {
                 THIS_and_PREV_same_rank_trigger = yes
@@ -64,7 +64,7 @@ targetted_decisions = {
         potential = {
             NOT = { character = FROM }
             league_potential_trigger = yes
-            not_founding_league = yes
+            not_founding_or_refused_league = yes
         }
 
         allow = {
@@ -75,7 +75,7 @@ targetted_decisions = {
                         text = LOWER_RANK_THAN_US
                         lower_real_tier_than = PREV
                     }
-                    not_founding_league = yes
+                    not_founding_or_refused_league = yes
                     THIS_can_be_elector_of_PREV_trigger = yes
                     THIS_can_join_PREV_league_trigger = yes
                     THIS_and_FROM_are_adjacent_trigger = yes

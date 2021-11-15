@@ -54,7 +54,9 @@ ElectiveLeagues_event_50_Take;This might take power away from us...;;Das könnte 
 ElectiveLeagues_event_50_Opportunity;...Or pose to be a great opportunity;;...Oder große Chancen bringen;;;;;;x
 
 # Effects
-NAPS_WITH_NEW_VASSALS;We sign a 20-year non-aggression pact with each cofounder, preventing us from revoking titles and preventing them from joining factions.\n;;Du unterschreibst einen 20-Jahre langen Nichtangriffspakt mit deinen Mitgründern. Dieser verhindert Titelaberkennung und das Beitreten von Fraktionen.\n;;;;;;;x
+NAPS_WITH_NEW_VASSALS;We sign a 24-year non-aggression pact with each cofounder, preventing us from revoking titles and preventing them from joining factions.\n;;Du unterschreibst einen 24-Jahre langen Nichtangriffspakt mit deinen Mitgründern. Dieser verhindert Titelaberkennung und das Beitreten von Fraktionen.\n;;;;;;;x
+NAPS_WITH_JOINED_VASSAL;We sign a 18-year non-aggression pact with your new elector, preventing us from revoking titles and preventing them from joining factions.\n;;Du unterschreibst einen 18-Jahre langen Nichtangriffspakt mit deinem neuen Wähler. Dieser verhindert Titelaberkennung und das Beitreten von Fraktionen.\n;;;;;;;x
+
 #BYE_COUNCIL;Your council members will be relieved of their duties, allowing us to form a new council without the hassle of firing anyone\n;;;;;;;;;x
 BYE_COUNCIL;You will need to hire new council members.\n;;Du wirst neue Ratsmitglieder einstellen müssen.\n;;;;;;;x
 
@@ -63,6 +65,7 @@ BYE_COUNCIL;You will need to hire new council members.\n;;Du wirst neue Ratsmitg
 
 invited_to_elective_league;Invited to Elective League;;Zu Wahlbund eingeladen;;;;;;;;;;x
 founding_elective_league;Founding an Elective League;;Gründet einen Wahlbund;;;;;;;;;;x
+refused_elective_league;Refused Elective League;;Trat Wahlbund nicht bei;;;;;;;;;;x
 accept_league;We accept this offer.;;Wir nehmen das Angebot an.;;;;;;;;;;x
 refuse_league;We refuse!;;Wir lehnen das Angebot ab.;;;;;;;;;;x
 num_cofounders;Amount of Co-founders;;Anzahl der Mitgründer;;;;;;;;;x
@@ -70,8 +73,9 @@ num_cofounders;Amount of Co-founders;;Anzahl der Mitgründer;;;;;;;;;x
 #SUCC LAWS AND STUFF
 vassal_elector_desc;Vassal-Elector;;Wählervassal;;;;;;;;;x
 electorus_desc;Elector;;Wähler;;;;;;;;;x
-opinion_cofounder;Potential Cofounder;;Potentieller Mitgründer;;;;;;;;;;x
 opinion_cofounded;Co-founder of our Elective League;;Mitgründer unseres Wahlbunds;;;;;;;;;;x
+opinion_joined_league;Joined my League;;Trat meinem Wahlbund bei;;;;;;;;;;x
+opinion_refused_league;Refused to join my League;;Geweigert Wahlbund beizutreten;;;;;;;;;;x
 
 succ_elective_league_desc; An Elective League founded by at least 3 titles.\n The holders of these titles and their most important vassal get 2+1 vote.\n;; Ein durch die Vereinigung mehrere Titel gegründetes Wahlreich.\n Die Gründer und Vassalen gleichen Grades bekommen 2 Stimmen. Wichtige Vassallen der Gründer 1 Stimme.\n;;;;;;;;;;x
 succ_elective_league;Elective League;;Wahlbund;;;;;;;;;x
@@ -85,11 +89,11 @@ tribal_league;Tribal Elective League;;Stammeswahlbund;;;;;;;;;x
 tooltip_TL_big_elector;Potential Leader;;Potentieller Nachfolger;;;;;;;;;x
 
 #RULES
-RULE_ELECTIVE_LEAGUES;Elective Leages;;Wahlligen;;;;;;;x
-RULE_GROUP_ELECTIVE_LEAGUES;Elective Leages;;Wahlligen;;;;;;;x
+RULE_ELECTIVE_LEAGUES;Elective Leages;;Wahlbünde;;;;;;;x
+RULE_GROUP_ELECTIVE_LEAGUES;Elective Leages;;Wahlbünde;;;;;;;x
 RULE_LEAGUES_ALL_TEXT;All;;Alle;;;;;;;x
-RULE_LEAGUES_ALL_DESC;Players and AI can found and expand Elective Leagues;;Spieler und KI können Wahlligen gründen und erweitern;;;;;;;x
+RULE_LEAGUES_ALL_DESC;Players and AI can found and expand Elective Leagues;;Spieler und KI können Wahlbünde gründen und erweitern;;;;;;;x
 RULE_LEAGUES_AI_LIMITED_TEXT;AI Limited;;KI Beschränkt;;;;;;;x
-RULE_LEAGUES_AI_LIMITED_DESC;Players and AI can found Elective Leagues. Only Players can expand them diplomatically;;Spieler und KI können Wahlligen gründen. Nur Spieler können die Liga diplomatisch erweitern;;;;;;;x
+RULE_LEAGUES_AI_LIMITED_DESC;Players and AI can found Elective Leagues. Only Players can expand them diplomatically;;Spieler und KI können Wahlbünde gründen. Nur Spieler können einen Bund diplomatisch erweitern;;;;;;;x
 RULE_LEAGUES_PLAYER_ONLY_TEXT;Player only;;Nur Spieler;;;;;;;x
-RULE_LEAGUES_PLAYER_ONLY_DESC;Only Players can found and expand Elective Leagues;;Nur Spieler können Wahlligen gründen und diplomatisch erweitern;;;;;;;x
+RULE_LEAGUES_PLAYER_ONLY_DESC;Only Players can found and expand Elective Leagues;;Nur Spieler können Wahlbünde gründen und diplomatisch erweitern;;;;;;;x

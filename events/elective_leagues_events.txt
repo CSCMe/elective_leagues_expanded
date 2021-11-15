@@ -17,7 +17,7 @@ character_event = {
         }
         league_potential_trigger = yes
         religion_allows_feudal_elective_trigger = yes
-        not_founding_league = yes
+        not_founding_or_refused_league = yes
         NOR = {
             has_law = succ_elective_league
             has_law = succ_tribal_league
@@ -192,8 +192,9 @@ character_event = {
     option = {
         name = refuse_league
         ai_chance = {
-            factor = 5
+            factor = 1
         }
+        THIS_refused_FROM_league_effect = yes
         hidden_tooltip = {
             random_list = {
                 10 = {
@@ -461,7 +462,7 @@ character_event = {
         higher_real_tier_than = COUNT
         independent = yes
         in_revolt = no
-        not_founding_league = yes
+        not_founding_or_refused_league = yes
     }
 
     mean_time_to_happen = {
@@ -479,6 +480,10 @@ character_event = {
                 NOT = { has_opinion_modifier = { who = ROOT  modifier = opinion_granted_independence } }
             }
             letter_event = { id = ElectiveLeagues.46 }
+            add_character_modifier = {
+                name = invited_to_elective_league
+                years = 1
+            }
         }
     }
 }
@@ -494,7 +499,6 @@ character_event = {
             letter_event = { id = ElectiveLeagues.46 days = 1}
             add_character_modifier = {
                 name = invited_to_elective_league
-                hidden = yes
                 years = 1
             }
         }
@@ -525,7 +529,16 @@ letter_event = {
     }
     option = {
         name = refuse_league
+        ai_chance = {
+            factor = 1
+        }
+        THIS_refused_FROM_league_effect = yes
         FROM = { letter_event = { id = ElectiveLeagues.34 days = 1 } }
+    }
+    after = {
+        hidden_tooltip = {
+            remove_character_modifier = invited_to_elective_league
+        }
     }
 }
 

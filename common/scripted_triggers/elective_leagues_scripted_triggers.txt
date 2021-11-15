@@ -13,10 +13,11 @@ league_potential_trigger = {
 	}
 }
 
-not_founding_league = {
+not_founding_or_refused_league = {
 	NOR = {
 		has_character_modifier = founding_elective_league
 		has_character_modifier = invited_to_elective_league
+		has_character_modifier = refused_elective_league
 	}
 }
 
@@ -45,7 +46,7 @@ THIS_can_join_PREV_league_trigger = {
 			has_law = succ_elective_league
 			has_law = succ_tribal_league
 		}
-		not_founding_league = yes
+		not_founding_or_refused_league = yes 
 	}
 	
 	# Same religion group
