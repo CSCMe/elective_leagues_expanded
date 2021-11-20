@@ -89,8 +89,8 @@ tribal_league;Tribal Elective League;;Stammeswahlbund;;;;;;;;;x
 tooltip_TL_big_elector;Potential Leader;;Potentieller Nachfolger;;;;;;;;;x
 
 #RULES
-RULE_ELECTIVE_LEAGUES;Elective Leages;;Wahlbünde;;;;;;;x
-RULE_GROUP_ELECTIVE_LEAGUES;Elective Leages;;Wahlbünde;;;;;;;x
+RULE_ELECTIVE_LEAGUES;Elective Leagues;;Wahlbünde;;;;;;;x
+RULE_GROUP_ELECTIVE_LEAGUES;Elective Leagues;;Wahlbünde;;;;;;;x
 RULE_LEAGUES_ALL_TEXT;All;;Alle;;;;;;;x
 RULE_LEAGUES_ALL_DESC;Players and AI can found and expand Elective Leagues;;Spieler und KI können Wahlbünde gründen und erweitern;;;;;;;x
 RULE_LEAGUES_AI_LIMITED_TEXT;AI Limited;;KI Beschränkt;;;;;;;x
